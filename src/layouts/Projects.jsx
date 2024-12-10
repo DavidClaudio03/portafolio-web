@@ -25,7 +25,7 @@ export default function Projects() {
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             Proyectos Destacados
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          <p className="mt-4 text-xl text-gray-500">
             Estos proyectos demuestran mi capacidad para desarrollar soluciones innovadoras y funcionales.
           </p>
         </div>

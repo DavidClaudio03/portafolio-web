@@ -1,9 +1,9 @@
 export default function About() {
     return (
       <section id="about" className="py-20 bg-white">
-        <div className="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-2 border-gray-200 rounded-lg">
+        <div className="py-5 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-2 border-gray-200 rounded-lg">
           <div className="">
-            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Sobre mí</h2>
+            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase mt-2">Sobre mí</h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               Pasión por el desarrollo y la innovación
             </p>
@@ -44,6 +44,14 @@ export default function About() {
               </div>
             </dl>
           </div>
+          <div className="relative h-20">
+            <button
+                //onClick={openPantalla}
+                className="absolute bottom-2 right-2 flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-3 md:text-sm md:px-6"
+              >
+                Más sobre mi
+              </button>
+            </div>
         </div>
       </section>
     )

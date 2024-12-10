@@ -4,18 +4,18 @@ import logo from "../image/logo1.png";
 
 function Navbar() {
   return (
-    <nav className="bg-white shadow-md py-5">
+    <nav className="bg-white shadow-md py-6">
       <div className="container flex justify-between items-center">
         {/* Logo */}
           <a href="/">
-            <img src={logo} alt="Logo" className="w-48 ml-10"/>
+            <img src={logo} alt="Logo" className="w-64 ml-10"/>
           </a>
 
         {/* Nombre */}
-        <div className="text-2xl font-bold">Innovación y Creatividad en Cada Proyecto</div>
+        <div className="text-3xl font-bold" style={{ color: 'rgb(68, 222, 200, 1)' }}>Innovación y Creatividad en Cada Proyecto</div>
 
         {/* Enlaces */}
-        <div className="flex space-x-4 text-base">
+        <div className="flex space-x-4 text-lg">
           <Link to="/" className="hover:text-green-600">
             Inicio
           </Link>
