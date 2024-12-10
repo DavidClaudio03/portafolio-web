@@ -1,0 +1,14 @@
+.main-container {
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    transition: left 250ms;
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .main-container {
+      width: calc(100vw - 260px);
+      left: 255px;
+    }
+  }
