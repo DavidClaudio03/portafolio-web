@@ -5,8 +5,8 @@ import PantallaFlotante from "../components/PantallaFlotante"
 function Presentation() {
   //Pantalla flotante
   const [isPantallaFlotanteOpen, setIsPantallaFlotanteOpen] = useState(false);
-  const openPantalla=()=>setIsPantallaFlotanteOpen(true);
-  const closePantalla=()=>setIsPantallaFlotanteOpen(false);
+  const openPantalla = () => setIsPantallaFlotanteOpen(true);
+  const closePantalla = () => setIsPantallaFlotanteOpen(false);
 
   return (
     <section className="pt-2 mt-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
@@ -39,19 +39,22 @@ function Presentation() {
               <a
                 href="https://github.com/DavidClaudio03"
                 target="_blank"
-                className="w-full flex items-center justify-center px-8 py-3 border border-black-50 text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
+                className="relative btn6 btn6_1 w-full flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 overflow-hidden group"
               >
-                Ver Proyectos
+                <span>Ver Proyectos</span>
+                
               </a>
             </div>
             <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-            <button
+              <button
                 onClick={openPantalla}
-                className="w-full flex items-center justify-center px-8 py-3 border border-black-50 text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
+                className="relative btn6 w-full flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 overflow-hidden group"
               >
-                Visión Profesional
+                <span>Visión Profesional</span>
               </button>
             </div>
+
+
           </div>
         </div>
       </div>

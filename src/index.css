@@ -29,3 +29,84 @@ body {
 ::-webkit-scrollbar-thumb:hover { 
   background: #168effbe; 
 }
+
+/* botones*/
+.btn6 {
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+  overflow: hidden;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  color: #4f46e5; /* Texto en color Indigo */
+  text-align: center;
+}
+
+.btn6 span {
+  position: relative;
+  z-index: 10;
+}
+
+.btn6::before,
+.btn6::after,
+.btn6 span::before,
+.btn6 span::after {
+  content: '';
+  position: absolute;
+  background: #4f46e5; /* Indigo para los bordes */
+  transition: all 0.4s ease;
+  pointer-events: none; /* Evitar interferencias */
+}
+
+/* Líneas horizontales */
+.btn6::before,
+.btn6::after {
+  height: 2px;
+  width: 0;
+}
+
+.btn6::before {
+  top: 0;
+  left: 0;
+}
+
+.btn6::after {
+  bottom: 0;
+  left: 0;
+}
+
+/* Líneas verticales */
+.btn6 span::before,
+.btn6 span::after {
+  width: 2px;
+  height: 0;
+  top: -17px;
+  bottom: 0;
+}
+
+/* Modificador base para btn6 */
+.btn6 span::before {
+  left: var(--left-offset, -26%);
+}
+
+.btn6 span::after {
+  right: var(--right-offset, -26%);
+}
+
+/* Modificador para btn6_1 */
+.btn6_1 {
+  --left-offset: -34%;
+  --right-offset: -34%;
+}
+
+/* Hover: Animación de bordes */
+.btn6:hover::before,
+.btn6:hover::after {
+  width: 100%; /* Líneas horizontales se expanden completamente */
+}
+
+.btn6:hover span::before,
+.btn6:hover span::after {
+  height: 300%; /* Líneas verticales se expanden completamente */
+}
