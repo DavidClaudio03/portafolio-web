@@ -1,7 +1,12 @@
 import geoportal from '../image/geoportal.png';
 import gamerfest from '../image/gamerfest.png';
+import PantallaFlotante from "../components/PantallaFlotante";
+import React, { useState } from "react";
 
 export default function Projects() {
+  const [isPantallaFlotanteOpen, setIsPantallaFlotanteOpen] = useState(false);
+  const openPantalla = () => setIsPantallaFlotanteOpen(true);
+  const closePantalla = () => setIsPantallaFlotanteOpen(false);
   const projects = [
     {
       title: "GeoPortal Municipal",
@@ -64,7 +69,16 @@ export default function Projects() {
             ))}
           </dl>
         </div>
+        <div className="relative h-20">
+          <button
+            onClick={openPantalla}
+            className="absolute bottom-2 right-2 flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-3 md:text-sm md:px-6"
+          >
+            Más Proyectos
+          </button>
+        </div>
       </div>
+      <PantallaFlotante isOpen={isPantallaFlotanteOpen} onClose={closePantalla}></PantallaFlotante>
     </section>
   );
 }
