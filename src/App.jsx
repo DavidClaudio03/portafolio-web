@@ -1,4 +1,4 @@
-import { Index } from './Pages/Index';
+import { Index } from './pages/Index.jsx';
 import "./App.css";
 
 function App() {
