@@ -24,7 +24,7 @@ function Presentation() {
                 Desarrollador de Software
               </span>
             </h1>
-            <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+            <p className="mt-3 max-w-md mx-auto text-base font-semibold text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
               Estudiante de Ingeniería de Software con una pasión ardiente por el
               desarrollo de software, enfocado en tecnologías web y móviles. Mi
               trayectoria se caracteriza por una combinación de creatividad,
