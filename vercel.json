@@ -1,8 +1,5 @@
 {
     "build": {
-      "commands": {
-        "build": "npm run build"
-      },
       "outputDirectory": "dist"
     }
   }
