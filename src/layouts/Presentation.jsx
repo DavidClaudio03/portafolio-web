@@ -19,7 +19,6 @@ function Presentation() {
             <span class="line -left"></span>
             <span class="line -bottom"></span>
             <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl mt-6">
-              <span className="block mb-5">David Claudio</span>
               <span className="block text-indigo-600">
                 Desarrollador de Software
               </span>
