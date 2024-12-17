@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Modal from "../components/PantallaFlotante"; // Asegúrate de tener la ruta correcta al componente Modal
 
+import "../Animation/Navbar/AnimacionFondo.css"
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -10,13 +11,27 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed py-7 top-0 left-0 w-full bg-white text-black shadow-md z-50">
-      <div className="container mx-auto flex items-center justify-start px-0">
+    <nav className="fixed py-7 top-0 left-0 w-full bg-gray-100 bg-opacity-80 text-black shadow-md z-50">
+        <ul class="circles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+        <div className="circle context container mx-auto flex items-center justify-start px-0">
+            
+          
         {/* Sección izquierda: Nombre y descripción */}
         <div className="font-extrabold flex items-center space-x-16 lg:space-x-28 md:space-x-2 ml-auto mr-auto ">
           {/* Nombre */}
-          <div className="text-lg sm:text-2xl md:text-3xl lg:text-2xl xl:text-2xl text-indigo-800">
-            David Claudio
+          <div className="text-lg sm:text-2xl md:text-3xl lg:text-2xl xl:text-2xl text-indigo-700">
+            David Claudio <sup>™</sup>
           </div>
 
           {/* Descripción (visible solo en pantallas grandes) */}
@@ -53,6 +68,7 @@ function Navbar() {
             Contacto
           </a>
         </div>
+        
 
         {/* Modal del Menú (pantallas pequeñas) */}
         <Modal isOpen={isMenuOpen} onClose={handleCloseMenu}>

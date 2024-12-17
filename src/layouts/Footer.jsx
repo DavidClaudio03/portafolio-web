@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaMailBulk, FaMailchimp, FaTwitter, FaWhatsapp } 
 
 function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-gray-100 text-black py-4">
       <div className="container mx-auto text-center">
         <div className="flex justify-center space-x-4 mb-4">
           <a href="https://github.com/DavidClaudio03" target='_blank' className="text-2xl hover:text-blue-400">
