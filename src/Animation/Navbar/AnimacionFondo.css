@@ -7,6 +7,8 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
 }
 
 .circles li{
@@ -111,3 +113,64 @@
     }
 
 }
+
+/* Animación home */
+#item{
+  width:80px;
+  height:30px;
+  list-style-type:none;
+  display:inline-block;
+  letter-spacing:1px;
+  color:black;
+  background:linear-gradient(45deg,#333333);
+  transition:500ms;
+  position:relative;
+  z-index:3;
+  overflow:hidden;
+}
+
+.inner_item{
+  width:75%;
+  height:100%;
+  position:absolute;
+  top:100%;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  transition:300ms;
+
+}
+    
+.inner_item:before{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:-100%;
+  left:0%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#item:hover .inner_item{
+  top:0%;
+}
+
+#item:hover .inner_item i{
+  opacity:1;
+}
+
+.inner_item i{
+  transition:400ms;
+  opacity:1;
+  font-size:1.2rem;
+}
+.inner_item_1:before{content:'Home';}
+.inner_item_2:before{content:'About';}
+.inner_item_3:before{content:'Projects';}
+.inner_item_4:before{content:'Contact';}
+
+
