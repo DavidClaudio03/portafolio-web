@@ -3,10 +3,17 @@ import { Link } from "react-router-dom";
 import Modal from "../components/PantallaFlotante"; // Asegúrate de tener la ruta correcta al componente Modal
 import "../Animation/Navbar/AnimacionFondo.css";
 import { FaHome, FaFolderOpen, FaMailBulk, FaUserSecret } from "react-icons/fa";
+import { RiMenu5Fill } from "react-icons/ri";
+import "../Animation/Navbar/particle-canvas"
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  };
+  const [openAuthModal, setIsMenuuOpen] = React.useState(false);
+
+  const closeAuthModal= () => {
     setIsMenuOpen(false);
   };
 
@@ -39,11 +46,11 @@ function Navbar() {
         </div>
 
         {/* Botón de Menú (para móviles) */}
-        <button
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" 
           className="mr-8 lg:hidden text-xl sm:text-2xl md:text-3xl focus:outline-none"
           onClick={() => setIsMenuOpen(true)}
         >
-          ☰
+           <RiMenu5Fill /> 
         </button>
 
         {/* Enlaces del menú (pantallas grandes) */}
@@ -58,7 +65,7 @@ function Navbar() {
           <li id="item" className="item_1">
             <div className="inner_item inner_item_2 flex items-center space-x-2">
               <a href="#about" className="flex items-center space-x-2 hover:text-indigo-400">
-                <FaFolderOpen className="ml-4" size={30}/>
+                <FaFolderOpen className="ml-4" size={30} />
               </a>
             </div>
           </li>
@@ -71,7 +78,6 @@ function Navbar() {
           </li>
           <li id="item" className="item_1">
             <div className="inner_item inner_item_4 flex items-center space-x-2">
-
               <a
                 href="https://wa.link/uo7roo"
                 className="hover:text-indigo-400 ml-4" size={30}
@@ -83,8 +89,6 @@ function Navbar() {
             </div>
           </li>
         </div>
-
-
         {/* Modal del Menú (pantallas pequeñas) */}
         <Modal isOpen={isMenuOpen} onClose={handleCloseMenu}>
           <div className="flex flex-col text-center justify-center items-center space-y-4 text-lg font-bold">
