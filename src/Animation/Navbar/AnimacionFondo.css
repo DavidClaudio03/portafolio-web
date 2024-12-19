@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+/* @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
 .circles{
     position: absolute;
@@ -18,7 +18,7 @@
     width: 20px;
     height: 20px;
     background: rgba(7, 7, 234, 0.5);
-    animation: animate 25s linear infinite;
+    animation: animate 10s linear infinite;
     bottom: -150px;
 }
 
@@ -112,7 +112,7 @@
         border-radius: 50%;
     }
 
-}
+} */
 
 /* Animación home */
 #item{
@@ -121,7 +121,7 @@
   list-style-type:none;
   display:inline-block;
   letter-spacing:1px;
-  color:black;
+  color:white;
   background:linear-gradient(45deg,#333333);
   transition:500ms;
   position:relative;
@@ -150,7 +150,7 @@
   display:flex;
   justify-content:center;
   align-items:center;
-  color: black;
+  color: white;
   font-weight: bold;
   font-style: italic;
 }
@@ -164,7 +164,7 @@
 }
 
 .inner_item i{
-  transition:400ms;
+  transition:100ms;
   opacity:1;
   font-size:1.2rem;
 }

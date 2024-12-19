@@ -1,11 +1,12 @@
 import React from 'react'
-import Navbar from './Navbar'
 import Footer from './Footer'
+import "../index.css";
+
 
 function MainLayout({ children }) {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="flex-grow">
         {children}
       </main>

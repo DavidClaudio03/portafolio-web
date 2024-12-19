@@ -233,3 +233,21 @@ body {
   transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
   transform-origin: left;
 }
+/* Animación Cursor */
+
+/* Aplica un estilo específico al canvas creado */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; /* Asegura que el canvas quede visible */
+  pointer-events: none;
+  filter: brightness(0.2); /* Cambia el color de las partículas a negro */
+}
+
+
+
+
+
