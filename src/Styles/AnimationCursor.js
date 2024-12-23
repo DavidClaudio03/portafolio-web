@@ -124,7 +124,6 @@ function ghostCursor(options) {
         this.position.x, // - (this.canv.width / 2) * scale,
         this.position.y //- this.canv.height / 2,
       )
-      
     }
   }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Animation/Navbar/AnimacionFondo.css"
+import "../Styles/Navbar/AnimationMenu.css";
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null; // Si el modal no está abierto, no se renderiza
 
