@@ -1,6 +1,11 @@
 import React, { useState } from "react";
-import "./styles.css";
-import PantallaFlotante from "../components/PantallaFlotante"
+import "../Styles/PresentationCss/AnimationBorder.css"
+import PantallaFlotante from "../components/PantallaFlotante";
+import foto from "../image/perfil.png";
+import cv from "../Document/ClaudioDavid_CV.pdf"
+import Modal from "../components/PantallaFlotante"; // Asegúrate de tener la ruta correcta al componente Modal
+import { FaHome, FaFolderOpen, FaMailBulk, FaUserSecret } from "react-icons/fa";
+import { RiMenu5Fill } from "react-icons/ri";
 
 function Presentation() {
   //Pantalla flotante
@@ -8,61 +13,189 @@ function Presentation() {
   const openPantalla = () => setIsPantallaFlotanteOpen(true);
   const closePantalla = () => setIsPantallaFlotanteOpen(false);
 
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <section className="pt-2 mt-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      {/* INICIO - Primer contenido de Presentación */}
-      <div className="max-w-7xl mx-auto py-10 relative overflow-hidden">
-        <div className="portfolio-experiment border-2 border-gray-100 rounded-lg">
-          <div className="enlace w-full text-center py-5 relative z-10 bg-white">
+    <section className="w-full px-4 sm:px-6 lg:px-8 bg-gray-800">
+      <div className="max-w-7xl h-screen mx-auto pt-4 relative overflow-hidden py-10">
+        {/* <nav className="fixed py-7 top-0 left-0 w-full bg-opacity-80 text-black shadow-md "> */}
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div className="circle py-1 shadow-md z-50 absolute bg-opacity-80 rounded-md context container mx-auto flex items-center justify-start px-0">
+          {/* Sección izquierda: Nombre y descripción */}
+          <div className="font-extrabold text-white flex items-center space-x-8 lg:space-x-20 md:space-x-2 ml-auto mr-auto ">
+            {/* Nombre */}
+            <div className="text-lg sm:text-2xl md:text-3xl lg:text-2xl xl:text-2xl text-white">
+              David Claudio <sup>™</sup>
+            </div>
+
+            {/* Descripción (visible solo en pantallas grandes) */}
+            <div className="hidden lg:block text-2xl sm:text-base md:text-lg lg:text-xl xl:text-3xl font-medium">
+              Innovation and Creativity in Every Project
+            </div>
+          </div>
+
+          {/* Botón de Menú (para móviles) */}
+          <button
+            class="btn btn-primary btn-lg"
+            data-toggle="modal"
+            data-target="#myModal"
+            className="mr-8 lg:hidden text-xl sm:text-2xl md:text-3xl focus:outline-none"
+            onClick={() => setIsMenuOpen(true)}
+          >
+            <RiMenu5Fill />
+          </button>
+
+          {/* Enlaces del menú (pantallas grandes) */}
+          <div className="hidden lg:flex lg:items-center lg:space-x-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl ml-auto mr-auto">
+            <li id="item" className="item_1">
+              <div className="inner_item inner_item_1 flex items-center space-x-2">
+                <a
+                  href="#home"
+                  className="flex items-center space-x-2 hover:text-indigo-400"
+                >
+                  <FaHome className="ml-4" size={30} />
+                </a>
+              </div>
+            </li>
+            <li id="item" className="item_1">
+              <div className="inner_item inner_item_2 flex items-center space-x-2">
+                <a
+                  href="#about"
+                  className="flex items-center space-x-2 hover:text-indigo-400"
+                >
+                  <FaFolderOpen className="ml-4" size={30} />
+                </a>
+              </div>
+            </li>
+            <li id="item" className="item_1">
+              <div className="inner_item inner_item_3 flex items-center space-x-2">
+                <a
+                  href="#projects"
+                  className="flex items-center space-x-2 hover:text-indigo-400"
+                >
+                  <FaMailBulk className="ml-4" size={30} />
+                </a>
+              </div>
+            </li>
+            <li id="item" className="item_1">
+              <div className="inner_item inner_item_4 flex items-center space-x-2">
+                <a
+                  href="https://wa.link/uo7roo"
+                  className="hover:text-indigo-400 ml-4"
+                  size={30}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaUserSecret />
+                </a>
+              </div>
+            </li>
+          </div>
+          {/* Modal del Menú (pantallas pequeñas) */}
+          <Modal isOpen={isMenuOpen} onClose={handleCloseMenu}>
+            <div className="flex flex-col text-center justify-center items-center space-y-4 text-lg font-bold">
+              <li id="item" className="item_1">
+                <div className="inner_item inner_item_1 flex items-center space-x-2">
+                  <FaHome />
+                </div>
+              </li>
+              <li id="item" className="item_1">
+                <div className="inner_item inner_item_2 flex items-center space-x-2">
+                  <FaFolderOpen />
+                </div>
+              </li>
+              <li id="item" className="item_1">
+                <div className="inner_item inner_item_3 flex items-center space-x-2">
+                  <FaMailBulk />
+                </div>
+              </li>
+              <li id="item" className="item_1">
+                <div className="inner_item inner_item_4 flex items-center space-x-2">
+                  <FaUserSecret />
+                  <a
+                    href="https://wa.link/uo7roo"
+                    className="hover:text-indigo-400"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  ></a>
+                </div>
+              </li>
+            </div>
+          </Modal>
+        </div>
+        {/* </nav > */}
+        <div className="portfolio-experiment md:pt-8 w-full flex flex-col items-center justify-center min-h-screen">
+          <div className="animacionborde flex flex-col md:flex-row flex-wrap w-full max-w-screen-lg min-h-[50vh] md:min-h-[50vh] items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 overflow-hidden">
             <span class="line -right"></span>
             <span class="line -top"></span>
             <span class="line -left"></span>
             <span class="line -bottom"></span>
-            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl mt-6">
-              <span className="block text-indigo-600">
+            {/* Contenedor de texto */}
+            <div className="flex-1 text-center md:text-left">
+              <h1 className="text-xl md:text-4xl font-bold text-indigo-600">
                 Desarrollador de Software
-              </span>
-            </h1>
-            <p className="mt-3 max-w-md mx-auto text-base font-semibold text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              Estudiante de Ingeniería de Software con una pasión ardiente por el
-              desarrollo de software, enfocado en tecnologías web y móviles. Mi
-              trayectoria se caracteriza por una combinación de creatividad,
-              adaptabilidad y un firme compromiso con el aprendizaje continuo.
-            </p>
-            <div className="mt-5  mx-auto sm:flex sm:justify-center md:mt-8 mb-6">
-              <div className="rounded-md">
-                 <a
+              </h1>
+              <p className="mt-3 text-sm md:text-base text-white text-justify">
+                Estudiante de Ingeniería de Software con una pasión ardiente por el desarrollo de software, enfocado
+                en tecnologías web y móviles. Mi trayectoria se caracteriza por una combinación de creatividad,
+                adaptabilidad y un firme compromiso con el aprendizaje continuo.
+              </p>
+              <div className="mt-4 flex flex-col md:flex-row md:space-x-3 space-y-3 md:space-y-0">
+                <a
                   href="https://wa.link/uo7roo"
                   target="_blank"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                  className="px-1 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm lg:px-4 lg:py-2 lg:text-base text-white bg-indigo-600 rounded-md hover:bg-indigo-700 text-center"
                 >
                   Contáctame
-                </a> 
-              </div>
-              <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                 <a
+                </a>
+                <a
                   href="https://github.com/DavidClaudio03"
                   target="_blank"
-                  className="relative btn6 btn6_1 w-full flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 overflow-hidden group"
+                  className="px-2 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm lg:px-4 lg:py-2 lg:text-base text-indigo-600 bg-white rounded-md hover:bg-gray-50 text-center"
                 >
-                  <span>Ver Proyectos</span>
-
-                </a> 
-              </div>
-              <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                  Ver Proyectos
+                </a>
                 <button
                   onClick={openPantalla}
-                  className="relative btn6 w-full flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 overflow-hidden group"
+                  className="px-2 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm lg:px-4 lg:py-2 lg:text-base text-indigo-600 bg-white rounded-md hover:bg-gray-50 text-center"
                 >
-                  <span>Visión Profesional</span>
+                  Visión Profesional
                 </button>
+                <a
+                  href={cv}
+                  download
+                  className="px-2 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm lg:px-4 lg:py-2 lg:text-base text-white bg-green-600 rounded-md hover:bg-green-700 text-center"
+                >
+                  Descargar CV
+                </a>
               </div>
             </div>
-          </div>
+            {/* Contenedor de imagen */}
+            <div className="flex-shrink-0">
+              <img
+                src={foto}
+                alt="Foto de perfil"
+                className="w-24 h-24 md:w-48 md:h-48 object-cover rounded-full border-2 border-indigo-600"
+              />
+            </div>
           </div>
         </div>
-      
-
+      </div>
       {/* FIN - Primer contenido de Presentación */}
       <PantallaFlotante isOpen={isPantallaFlotanteOpen} onClose={closePantalla}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
