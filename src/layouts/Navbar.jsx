@@ -4,16 +4,10 @@ import Modal from "../components/PantallaFlotante"; // Asegúrate de tener la ru
 import "../Animation/Navbar/AnimacionFondo.css";
 import { FaHome, FaFolderOpen, FaMailBulk, FaUserSecret } from "react-icons/fa";
 import { RiMenu5Fill } from "react-icons/ri";
-import "../Animation/Navbar/particle-canvas"
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const handleCloseMenu = () => {
-    setIsMenuOpen(false);
-  };
-  const [openAuthModal, setIsMenuuOpen] = React.useState(false);
-
-  const closeAuthModal= () => {
     setIsMenuOpen(false);
   };
 
