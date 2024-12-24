@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Styles/PresentationCss/AnimationBorder.css"
+import "../Styles/Navbar/AnimationBorderNav.css"
 import PantallaFlotante from "../components/PantallaFlotante";
 import foto from "../image/perfil.png";
 import cv from "../Document/ClaudioDavid_CV.pdf"
@@ -12,17 +13,14 @@ function Presentation() {
   const [isPantallaFlotanteOpen, setIsPantallaFlotanteOpen] = useState(false);
   const openPantalla = () => setIsPantallaFlotanteOpen(true);
   const closePantalla = () => setIsPantallaFlotanteOpen(false);
-
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
   };
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 bg-gray-800">
+    <section className="w-full px-4 sm:px-6 lg:px-8 bg-gray-900">
       <div className="max-w-7xl h-screen mx-auto pt-4 relative overflow-hidden py-10">
-        {/* <nav className="fixed py-7 top-0 left-0 w-full bg-opacity-80 text-black shadow-md "> */}
         <ul class="circles">
           <li></li>
           <li></li>
@@ -35,11 +33,12 @@ function Presentation() {
           <li></li>
           <li></li>
         </ul>
-        <div className="circle py-1 shadow-md z-50 absolute bg-opacity-80 rounded-md context container mx-auto flex items-center justify-start px-0">
+        <div className="animated-border-box-glow"></div>
+        <div className="animated-border-box circle py-2 shadow-md z-50 absolute bg-opacity-80 rounded-md context container mx-auto flex items-center justify-start px-0">
           {/* Sección izquierda: Nombre y descripción */}
-          <div className="font-extrabold text-white flex items-center space-x-8 lg:space-x-20 md:space-x-2 ml-auto mr-auto ">
+          <div className="font-extrabold text-indigo-600 flex items-center space-x-8 lg:space-x-20 md:space-x-2 ml-auto mr-auto ">
             {/* Nombre */}
-            <div className="text-lg sm:text-2xl md:text-3xl lg:text-2xl xl:text-2xl text-white">
+            <div className="text-lg sm:text-2xl md:text-3xl lg:text-2xl xl:text-2xl text-indigo-600">
               David Claudio <sup>™</sup>
             </div>
 
@@ -48,7 +47,6 @@ function Presentation() {
               Innovation and Creativity in Every Project
             </div>
           </div>
-
           {/* Botón de Menú (para móviles) */}
           <button
             class="btn btn-primary btn-lg"
