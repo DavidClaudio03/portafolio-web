@@ -1,125 +1,124 @@
-/*Animación Presentación*/
+/* Contenedor principal con animación de borde */
 .portfolio-experiment .animacionborde {
-    color: white;
-    padding: 0.7em calc(0.7em * 1.2);
-    display: flex;
-    align-items: center;
-    padding: 1;
-    justify-content: space-between !important;
-    border: 3px solid transparent;
-    position: relative;
-    font-size: 1.5em;
-    cursor: pointer;
-    letter-spacing: 0.07em;
-    border-radius: 10px; /* Rounded corners */
-  }
-  
-  .portfolio-experiment .animacionborde:after {
-    position: absolute;
-    content: '';
-    bottom: -3px;
-    left: calc(0.7em * 1.2);
-    right: calc(0.7em * 1.2);
-    height: 3px;
-    background: #4f46e5;
-    border-radius: 10px; /* Rounded corners for animation */
-    transition: 
-      transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s,
-      right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
-      left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
-    transform-origin: left;
-  }
-  
-  .portfolio-experiment .line {
-    position: absolute;
-    background: #4f46e5;
-    border-radius: 10px; /* Rounded corners */
-  }
-  
-  .portfolio-experiment .line.-right,
-  .portfolio-experiment .line.-left {
-    width: 3px;
-    bottom: -3px;
-    top: -3px;
-    transform: scale3d(1, 0, 1);
-  }
-  
-  .portfolio-experiment .line.-top,
-  .portfolio-experiment .line.-bottom {
-    height: 3px;
-    left: -3px;
-    right: -3px;
-    transform: scale3d(0, 1, 1);
-  }
-  
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7em calc(0.7em * 1.2);
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+  border: 3px solid transparent;
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Para mantener las líneas dentro */
+  z-index: 1; /* Asegura que el contenido esté sobre las líneas */
+}
+
+/* Línea inferior siempre visible */
+.portfolio-experiment .animacionborde:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25px; /* Ajuste para alineación */
+  right: 10px; /* Ajuste simétrico */
+  height: 3px;
+  background: #4f46e5;
+  border-radius: 10px;
+  transform-origin: left;
+  transform: scaleX(1); /* Línea siempre visible */
+  transition: transform 0.2s cubic-bezier(1, 0, 0.37, 1);
+  z-index: -1; /* Asegura que esté debajo del contenido */
+}
+
+/* Líneas animadas ocultas inicialmente */
+.portfolio-experiment .line {
+  position: absolute;
+  background: #4f46e5;
+  transform: scale(0); /* Ocultar por defecto */
+  border-radius: 10px;
+  transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+}
+
+/* Líneas verticales (izquierda y derecha) */
+.portfolio-experiment .line.-right,
+.portfolio-experiment .line.-left {
+  width: 3px; /* Grosor consistente */
+  top: 0; /* Asegura que ambas líneas comiencen en el mismo punto */
+  bottom: 0; /* Asegura que ambas líneas terminen en el mismo punto */
+}
+
+/* Líneas horizontales (superior e inferior) */
+.portfolio-experiment .line.-top,
+.portfolio-experiment .line.-bottom {
+  height: 3px; /* Grosor consistente */
+  left: 0;
+  right: 0;
+}
+
+/* Línea derecha */
+.portfolio-experiment .line.-right {
+  right: 0;
+}
+
+/* Línea superior */
+.portfolio-experiment .line.-top {
+  top: 0;
+}
+
+/* Línea izquierda */
+.portfolio-experiment .line.-left {
+  left: 0;
+}
+
+/* Línea inferior */
+.portfolio-experiment .line.-bottom {
+  bottom: 0;
+  transform: scaleX(1); /* Línea siempre visible */
+}
+
+/* Hover: activar animación de bordes */
+.portfolio-experiment .animacionborde:hover:after {
+  transform: scaleX(0); /* Ocultar temporalmente la línea inferior */
+  transition: transform 0.3s cubic-bezier(1, 0, 0.37, 1);
+}
+
+.portfolio-experiment .animacionborde:hover .line {
+  transform: scale(1); /* Mostrar las líneas animadas */
+}
+
+/* Ajustes de transiciones en hover */
+.portfolio-experiment .animacionborde:hover .line.-right {
+  transform-origin: center;
+}
+
+.portfolio-experiment .animacionborde:hover .line.-top {
+  transform-origin: left;
+}
+
+.portfolio-experiment .animacionborde:hover .line.-left {
+  transform-origin: top;
+}
+
+.portfolio-experiment .animacionborde:hover .line.-bottom {
+  transform-origin: right;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  /* Línea derecha ajustada para móviles */
   .portfolio-experiment .line.-right {
-    right: -3px;
-    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
-    transform-origin: top;
+    top: 10%; /* Ajusta el inicio más abajo */
+    bottom: 10%; /* Termina más arriba */
+    width: 2px; /* Grosor más pequeño para móviles */
+    transform-origin: center; /* Cambia el origen al centro */
   }
-  
-  .portfolio-experiment .line.-top {
-    top: -3px;
-    transition: transform 0.08s linear 0.43s;
-    transform-origin: left;
+
+  /* Hover: cambiar para móviles */
+  .portfolio-experiment .animacionborde:hover .line.-right {
+    top: 1%; /* Hace que el dibujo empiece más abajo durante hover */
+    bottom: -3%; /* Hace que termine más arriba durante hover */
+    transform: scaleY(0.96); /* Hace que sea más pequeña */
   }
-  
-  .portfolio-experiment .line.-left {
-    left: -3px;
-    transition: transform 0.08s linear 0.51s;
-    transform-origin: bottom;
-  }
-  
-  .portfolio-experiment .line.-bottom {
-    bottom: -3px;
-    transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
-    transform-origin: right;
-  }
-  
-  .portfolio-experiment .animacionborde:hover,
-  .portfolio-experiment .animacionborde:active {
-    border-radius: 10px; 
-  }
-  
-  .portfolio-experiment .animacionborde:hover:after,
-  .portfolio-experiment .animacionborde:active:after {
-    transform: scale3d(0, 1, 1);
-    right: -3px;
-    left: -3px;
-    transform-origin: right;
-    border-radius: 10px; /* Rounded corners for hover animation */
-    transition: 
-      transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s,
-      right 0.2s cubic-bezier(1, 0, 0.65, 1.01),
-      left 0s 0.3s;
-  }
-  
-  .portfolio-experiment .animacionborde:hover .line,
-  .portfolio-experiment .animacionborde:active .line {
-    transform: scale3d(1, 1, 1);
-    border-radius: 10px; /* Rounded corners during hover */
-  }
-  
-  .portfolio-experiment .animacionborde:hover .line.-right,
-  .portfolio-experiment .animacionborde:active .line.-right {
-    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
-    transform-origin: bottom;
-  }
-  
-  .portfolio-experiment .animacionborde:hover .line.-top,
-  .portfolio-experiment .animacionborde:active .line.-top {
-    transition: transform 0.08s linear 0.4s;
-    transform-origin: right;
-  }
-  
-  .portfolio-experiment .animacionborde:hover .line.-left,
-  .portfolio-experiment .animacionborde:active .line.-left {
-    transition: transform 0.08s linear 0.48s;
-    transform-origin: top;
-  }
-  
-  .portfolio-experiment .animacionborde:hover .line.-bottom,
-  .portfolio-experiment .animacionborde:active .line.-bottom {
-    transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
-    transform-origin: left;
-  }
+}
+
+

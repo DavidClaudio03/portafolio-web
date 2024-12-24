@@ -20,8 +20,8 @@ function Presentation() {
   };
 
   return (
-    <section className="w-full h-screen px-4 sm:px-6 lg:px-8 bg-gray-800 ">
-      <div className="max-w-7xl mx-auto pt-8 relative overflow-hidden py-20">
+    <section className="w-full px-4 sm:px-6 lg:px-8 bg-gray-800">
+      <div className="max-w-7xl h-screen mx-auto pt-4 relative overflow-hidden py-10">
         {/* <nav className="fixed py-7 top-0 left-0 w-full bg-opacity-80 text-black shadow-md "> */}
         <ul class="circles">
           <li></li>
@@ -35,7 +35,7 @@ function Presentation() {
           <li></li>
           <li></li>
         </ul>
-        <div className="circle py-2 shadow-md z-50 absolute bg-opacity-80 rounded-md context container mx-auto flex items-center justify-start px-0">
+        <div className="circle py-1 shadow-md z-50 absolute bg-opacity-80 rounded-md context container mx-auto flex items-center justify-start px-0">
           {/* Sección izquierda: Nombre y descripción */}
           <div className="font-extrabold text-white flex items-center space-x-8 lg:space-x-20 md:space-x-2 ml-auto mr-auto ">
             {/* Nombre */}
@@ -139,15 +139,15 @@ function Presentation() {
           </Modal>
         </div>
         {/* </nav > */}
-        <div className="portfolio-experiment w-full flex flex-col items-center justify-center min-h-screen">
-          <div className="animacionborde flex flex-col md:flex-row w-full max-w-screen-lg items-center md:items-start space-y-6 md:space-y-0 md:space-x-6">
+        <div className="portfolio-experiment md:pt-8 w-full flex flex-col items-center justify-center min-h-screen">
+          <div className="animacionborde flex flex-col md:flex-row flex-wrap w-full max-w-screen-lg min-h-[50vh] md:min-h-[50vh] items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 overflow-hidden">
             <span class="line -right"></span>
             <span class="line -top"></span>
             <span class="line -left"></span>
             <span class="line -bottom"></span>
             {/* Contenedor de texto */}
             <div className="flex-1 text-center md:text-left">
-              <h1 className="text-3xl md:text-5xl font-bold text-indigo-600">
+              <h1 className="text-xl md:text-4xl font-bold text-indigo-600">
                 Desarrollador de Software
               </h1>
               <p className="mt-3 text-sm md:text-base text-white text-justify">
@@ -155,11 +155,11 @@ function Presentation() {
                 en tecnologías web y móviles. Mi trayectoria se caracteriza por una combinación de creatividad,
                 adaptabilidad y un firme compromiso con el aprendizaje continuo.
               </p>
-              <div className="mt-5 flex flex-col md:flex-row md:space-x-3 space-y-3 md:space-y-0">
+              <div className="mt-4 flex flex-col md:flex-row md:space-x-3 space-y-3 md:space-y-0">
                 <a
                   href="https://wa.link/uo7roo"
                   target="_blank"
-                  className="px-2 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm lg:px-4 lg:py-2 lg:text-base text-white bg-indigo-600 rounded-md hover:bg-indigo-700 text-center"
+                  className="px-1 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm lg:px-4 lg:py-2 lg:text-base text-white bg-indigo-600 rounded-md hover:bg-indigo-700 text-center"
                 >
                   Contáctame
                 </a>
@@ -190,7 +190,7 @@ function Presentation() {
               <img
                 src={foto}
                 alt="Foto de perfil"
-                className="w-24 h-24 md:w-48 md:h-48 object-cover rounded-full border-4 border-indigo-600"
+                className="w-24 h-24 md:w-48 md:h-48 object-cover rounded-full border-2 border-indigo-600"
               />
             </div>
           </div>
