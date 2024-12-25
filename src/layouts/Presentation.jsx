@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "../Styles/PresentationCss/AnimationBorder.css"
+import "../Styles/Navbar/AnimationBorderNav.css"
+import "../Styles/PresentationCss/AnimationBackground.css"
 import PantallaFlotante from "../components/PantallaFlotante";
 import foto from "../image/perfil.png";
+import react from "../image/react.js.png";
 import cv from "../Document/ClaudioDavid_CV.pdf"
 import Modal from "../components/PantallaFlotante"; // Asegúrate de tener la ruta correcta al componente Modal
 import { FaHome, FaFolderOpen, FaMailBulk, FaUserSecret } from "react-icons/fa";
@@ -12,17 +15,14 @@ function Presentation() {
   const [isPantallaFlotanteOpen, setIsPantallaFlotanteOpen] = useState(false);
   const openPantalla = () => setIsPantallaFlotanteOpen(true);
   const closePantalla = () => setIsPantallaFlotanteOpen(false);
-
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
   };
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 bg-gray-800">
-      <div className="max-w-7xl h-screen mx-auto pt-4 relative overflow-hidden py-10">
-        {/* <nav className="fixed py-7 top-0 left-0 w-full bg-opacity-80 text-black shadow-md "> */}
+    <section className="animation-container w-full px-4 sm:px-6 lg:px-8 bg-gray-900">
+      <div className="max-w-7xl h-screen mx-auto pt-2 relative overflow-hidden py-10">
         <ul class="circles">
           <li></li>
           <li></li>
@@ -35,20 +35,20 @@ function Presentation() {
           <li></li>
           <li></li>
         </ul>
-        <div className="circle py-1 shadow-md z-50 absolute bg-opacity-80 rounded-md context container mx-auto flex items-center justify-start px-0">
+        <div className="animated-border-box-glow"></div>
+        <div className="animated-border-box circle py-4 shadow-md z-50 absolute bg-opacity-80 rounded-md context container mx-auto flex items-center justify-start px-0">
           {/* Sección izquierda: Nombre y descripción */}
-          <div className="font-extrabold text-white flex items-center space-x-8 lg:space-x-20 md:space-x-2 ml-auto mr-auto ">
+          <div className="font-extrabold flex items-center space-x-8 lg:space-x-20 md:space-x-2 ml-auto mr-auto ">
             {/* Nombre */}
-            <div className="text-lg sm:text-2xl md:text-3xl lg:text-2xl xl:text-2xl text-white">
+            <div className="text-lg sm:text-2xl md:text-3xl lg:text-2xl xl:text-2xl text-indigo-500">
               David Claudio <sup>™</sup>
             </div>
 
             {/* Descripción (visible solo en pantallas grandes) */}
-            <div className="hidden lg:block text-2xl sm:text-base md:text-lg lg:text-xl xl:text-3xl font-medium">
+            <div className="hidden text-indigo-500 lg:block text-2xl sm:text-base md:text-lg lg:text-xl xl:text-3xl font-medium">
               Innovation and Creativity in Every Project
             </div>
           </div>
-
           {/* Botón de Menú (para móviles) */}
           <button
             class="btn btn-primary btn-lg"
@@ -139,8 +139,8 @@ function Presentation() {
           </Modal>
         </div>
         {/* </nav > */}
-        <div className="portfolio-experiment md:pt-8 w-full flex flex-col items-center justify-center min-h-screen">
-          <div className="animacionborde flex flex-col md:flex-row flex-wrap w-full max-w-screen-lg min-h-[50vh] md:min-h-[50vh] items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 overflow-hidden">
+        <div className="portfolio-experiment md:pt-8 w-full flex flex-col items-center justify-center ">
+          <div className="animacionborde flex flex-col md:flex-row flex-wrap w-full max-w-screen-lg min-h-[60vh] md:min-h-[50vh] items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 overflow-hidden">
             <span class="line -right"></span>
             <span class="line -top"></span>
             <span class="line -left"></span>
@@ -192,6 +192,82 @@ function Presentation() {
                 alt="Foto de perfil"
                 className="w-24 h-24 md:w-48 md:h-48 object-cover rounded-full border-2 border-indigo-600"
               />
+            </div>
+          </div>
+          <div class="slider mt-6">
+            <div class="move">
+              <div class="box">
+                <div class="circless">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <span></span>
+                </div>
+              </div>
+              <div class="box">
+              <div class="circless">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <span></span>
+                </div>
+              </div>
+              <div class="box">
+              <div class="circlesss">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <span></span>
+                </div>
+              </div>
+              <div class="box">
+              <div class="circless">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <span></span>
+                </div>
+              </div>
+              <div class="box">
+              <div class="circless">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <span></span>
+                </div>
+              </div>
+              <div class="box">
+              <div class="circless">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <span></span>
+                </div>
+              </div>
+              <div class="box">
+
+              </div>
+              <div class="box">
+
+              </div>
+              <div class="box">
+
+              </div>
+              <div class="box">
+
+              </div>
+              <div class="box">
+
+              </div>
+              <div class="box">
+
+              </div>
+              <div class="box">
+
+              </div>
+              <div class="box">
+
+              </div>
             </div>
           </div>
         </div>
