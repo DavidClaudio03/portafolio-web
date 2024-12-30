@@ -30,12 +30,13 @@
     content: '';
     position: absolute;
     z-index: -1;
-    left: 1px;
+    left: 1.5px;
+    right: 1px;
     top: 1px;
     width: calc(100% - 2px);
     height: calc(100% - 2px);
     background-color: rgba(22, 22, 32, 0.9);  /* Fondo oscuro sutil */
-    border-radius: 10px;
+    border-radius: 8px;
   }
   
   /* Animación para el gradiente */
