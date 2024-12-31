@@ -2,9 +2,9 @@ import React from 'react';
 import "../../Styles/PresentationCss/AnimationBorder.css"
 export default () => (
     <div>
-        <span class="line -right"></span>
-        <span class="line -top"></span>
-        <span class="line -left"></span>
-        <span class="line -bottom"></span>
+        <span className="line -right"></span>
+        <span className="line -top"></span>
+        <span className="line -left"></span>
+        <span className="line -bottom"></span>
     </div>
 );

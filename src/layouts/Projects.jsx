@@ -1,6 +1,6 @@
 import geoportal from '../image/geoportal.png';
 import gamerfest from '../image/gamerfest.png';
-import PantallaFlotante from "../components/PantallaFlotante";
+import PantallaFlotante from "../components/PopupBase";
 import React, { useState } from "react";
 
 export default function Projects() {

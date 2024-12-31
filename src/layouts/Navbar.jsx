@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from "../components/PantallaFlotante"
+import Modal from "../components/PopupBase"
 import "../Styles/Navbar/AnimationBorderNav.css"
 import { FaHome, FaFolderOpen, FaMailBulk, FaUserSecret } from "react-icons/fa"
 import { RiMenu5Fill } from "react-icons/ri";
@@ -11,7 +11,8 @@ function NavBar ()  {
   return (
     <div>
         <div className="animated-border-box-glow"></div>
-        <div className="animated-border-box py-4 shadow-md z-50 absolute bg-opacity-10 rounded-md context container mx-auto flex items-center justify-start px-0">
+        <div className="animated-border-box fixed top-0 left-0 right-0 z-50 bg-opacity-10 rounded-md container mx-auto flex items-center justify-center py-4 px-4 shadow-md">
+
           {/* Sección izquierda: Nombre y descripción */}
           <div className="font-extrabold flex items-center space-x-8 lg:space-x-20 md:space-x-2 ml-auto mr-auto ">
             {/* Nombre */}
@@ -26,10 +27,9 @@ function NavBar ()  {
           </div>
           {/* Botón de Menú (para móviles) */}
           <button
-            class="btn btn-primary btn-lg"
             data-toggle="modal"
             data-target="#myModal"
-            className="mr-8 lg:hidden text-xl sm:text-2xl md:text-3xl focus:outline-none"
+            className="btn btn-primary btn-lg mr-8 lg:hidden text-xl sm:text-2xl md:text-3xl focus:outline-none"
             onClick={() => setIsMenuOpen(true)}
           >
             <RiMenu5Fill />
