@@ -99,4 +99,58 @@
       transform: rotateZ(calc(360deg / 3 * 3)) rotateX(66deg) rotateZ(360deg);
     }
   }
-  /* https://codepen.io/abidzaidi/pen/jOqdRjr */
+  /* https://codepen.io/abidzaidi/pen/jOqdRjr 
+   /* <div class="slider mt-6">
+            <div class="move">
+              <div class="box">
+                <div class="circless">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <span></span>
+                </div>
+              </div>
+              <div class="box">
+                <div class="circless">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <span></span>
+                </div>
+              </div>
+              <div class="box">
+                <div class="circlesss">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <span></span>
+                </div>
+              </div>
+              <div class="box">
+                <div class="circless">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <span></span>
+                </div>
+              </div>
+              <div class="box">
+                <div class="circless">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <span></span>
+                </div>
+              </div>
+              <div class="box">
+                <div class="circless">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <span></span>
+                </div>
+              </div>
+            </div> 
+          </div> */
+  
+  

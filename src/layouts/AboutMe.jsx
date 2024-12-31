@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PantallaFlotante from "../components/PantallaFlotante"
+import PantallaFlotante from "../components/PopupBase"
 
 export default function About() {
   const [isPantallaFlotanteOpen, setIsPantallaFlotanteOpen] = useState(false);
