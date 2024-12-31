@@ -1,51 +1,55 @@
 .animated-border-box, .animated-border-box-glow {
-    position: relative;
-    z-index: 0;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  .animated-border-box-glow {
-    filter: blur(30px);
-  }
-  
-  /* Animación solo cuando el cursor está encima del elemento */
-  .animated-border-box:hover:before, .animated-border-box-glow:hover:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200%;
-    height: 200%;
-    border: 1px solid transparent;  /* Borde vacío */
-    border-radius: 8px;
-    background: linear-gradient(45deg, rgba(65, 87, 250, 0.6), rgba(100, 200, 255, 0.6), rgba(117, 239, 117, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 159, 64, 0.6), rgba(255, 193, 255, 0.6)); /* Colores más suaves */
-    background-size: 200% 200%;
-    animation: glowingBorder 2s linear infinite;  /* Animación en una dirección */
-    z-index: -1;
-  }
-  
-  .animated-border-box:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 1.5px;
-    right: 1px;
-    top: 1px;
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-    background-color: rgba(22, 22, 32, 0.9);  /* Fondo oscuro sutil */
-    border-radius: 8px;
-  }
-  
-  /* Animación para el gradiente */
-  @keyframes glowingBorder {
-    0% {
+  position: fixed; /* Cambiado a fixed para que el NavBar permanezca fijo */
+  top: 2%;
+  left: 0%;
+  width: 100%; /* Asegura que abarque todo el ancho */
+  z-index: 50; /* Asegura que esté encima de otros elementos */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.animated-border-box-glow {
+  filter: blur(30px);
+}
+
+/* Animación solo cuando el cursor está encima del elemento */
+.animated-border-box:hover:before, .animated-border-box-glow:hover:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 200%;
+  border: 1px solid transparent; /* Borde vacío */
+  border-radius: 8px;
+  background: linear-gradient(45deg, rgba(65, 87, 250, 0.6), rgba(100, 200, 255, 0.6), rgba(117, 239, 117, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 159, 64, 0.6), rgba(255, 193, 255, 0.6)); /* Colores más suaves */
+  background-size: 200% 200%;
+  animation: glowingBorder 2s linear infinite; /* Animación en una dirección */
+  z-index: -1;
+}
+
+.animated-border-box:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 1.5px;
+  right: 1px;
+  top: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background-color: rgba(36, 36, 48, 0.9); /* Fondo oscuro sutil */
+  border-radius: 8px;
+}
+
+/* Animación para el gradiente */
+@keyframes glowingBorder {
+  0% {
       background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
   }
-  
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+
