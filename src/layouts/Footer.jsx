@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaMailBulk, FaMailchimp, FaTwitter, FaWhatsapp } 
 
 function Footer() {
   return (
-    <footer className="bg-gray-100 text-black py-4">
+    <footer className="text-white py-4">
       <div className="container mx-auto text-center">
         <div className="flex justify-center space-x-4 mb-4">
           <a href="https://github.com/DavidClaudio03" target='_blank' className="text-2xl hover:text-blue-400">
@@ -16,7 +16,7 @@ function Footer() {
           <a href="https://wa.link/uo7roo" target='_blank' className="text-2xl hover:text-blue-400">
             <FaWhatsapp />
           </a>
-          <a href="#" target='_blank' className="text-2xl hover:text-blue-400">
+          <a href="mailto:davidclaudio5000@gmail.com" target='_blank' className="text-2xl hover:text-blue-400">
             <FaMailBulk />
           </a>
         </div>

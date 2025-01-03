@@ -23,20 +23,20 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-10 bg-gray-50">
-      <div className="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-2 border-gray-200 bg-white rounded-lg">
+    <section id="projects" className="py-10">
+      <div className="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-2 border-gray-200 rounded-lg">
         <div className="">
           <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Proyectos</h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-indigo-600 sm:text-4xl">
             Proyectos Destacados
           </p>
-          <p className="mt-4 text-xl text-gray-500">
+          <p className="mt-4 text-xl text-white">
             Estos proyectos demuestran mi capacidad para desarrollar soluciones innovadoras y funcionales.
           </p>
         </div>
 
         <div className="mt-10">
-          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 ">
             {projects.map((project, index) => (
               <div key={index} className="relative">
                 <dt>
@@ -64,7 +64,7 @@ export default function Projects() {
                   )}
                   <p className="text-lg leading-6 font-medium text-gray-900">{project.title}</p>
                 </dt>
-                <dd className="mt-2 text-base text-gray-500">{project.description}</dd>
+                <dd className="mt-2 text-base text-white">{project.description}</dd>
               </div>
             ))}
           </dl>
