@@ -3,6 +3,7 @@ import AnimationBody from "../Animation/Body/Ani_Body";
 import NavBar from "./Navbar";
 import AnimationBorder from "../Animation/Presentation/Ani_BorderPresentation"
 import ProfessionalVision from "../popup/ProfessionalVision";
+import LogoSlider from "../components/Slider"
 
 import "../Styles/PresentationCss/AnimationBackground.css" /* Uso para LOGOS de Frameworks */
 import foto from "../image/perfil.png";
@@ -70,6 +71,7 @@ function Presentation() {
             </div>
           </div>
         {/* Animacion LOGOS */}
+        <LogoSlider />
         </div>
       </div>
       <ProfessionalVision isPopupOpen={isPopupOpen} closePopup={closePopup}/>
