@@ -3,8 +3,7 @@ import AnimationBody from "../Animation/Body/Ani_Body";
 import NavBar from "./Navbar";
 import AnimationBorder from "../Animation/Presentation/Ani_BorderPresentation"
 import ProfessionalVision from "../popup/ProfessionalVision";
-
-import "../Styles/PresentationCss/AnimationBackground.css" /* Uso para LOGOS de Frameworks */
+import LogoSlider from "../components/Slider"
 import foto from "../image/perfil.png";
 import cv from "../Document/ClaudioDavid_CV.pdf"
 
@@ -19,11 +18,11 @@ function Presentation() {
       <AnimationBody />
       <div className="max-w-7xl h-screen mx-auto pt-20 relative overflow-hidden py-10">
         <NavBar />
-        <div className="portfolio-experiment md:pt-8 w-full flex flex-col items-center justify-center ">
+        <div className="portfolio-experiment md:pt-14 w-full flex flex-col items-center justify-center ">
           <div className="animacionborde flex flex-col  md:flex-row flex-wrap w-full max-w-screen-lg min-h-[60vh] md:min-h-[50vh] items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 overflow-hidden">
             <AnimationBorder/> 
             <div className="flex-1 text-center md:text-left">
-              <h1 className="text-xl md:text-4xl font-bold text-indigo-600">
+              <h1 className="text-xl md:text-4xl font-bold text-customIndigo">
                 Desarrollador de Software
               </h1>
               <p className="mt-3 text-sm md:text-base text-white text-justify">
@@ -70,6 +69,7 @@ function Presentation() {
             </div>
           </div>
         {/* Animacion LOGOS */}
+        <LogoSlider />
         </div>
       </div>
       <ProfessionalVision isPopupOpen={isPopupOpen} closePopup={closePopup}/>
