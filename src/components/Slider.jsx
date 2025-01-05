@@ -4,7 +4,7 @@ import {DiMsqlServer } from "react-icons/di";
 import {FaDocker, FaNodeJs, FaUnity } from "react-icons/fa";
 import { TbBrandLaravel } from "react-icons/tb";
 import { RiReactjsLine } from "react-icons/ri";
-import "../App.css";
+import "../Styles/PresentationCss/SliderLogo.css";
 
 const LogoSlider = () => {
   // Lista de íconos dinámicos
@@ -36,7 +36,7 @@ const LogoSlider = () => {
       <div className="logos-slide">
         {icons.map(({ Icon, label }, index) => (
           <div key={index} className="icon-container" title={label}>
-            <Icon size={80} />
+            <Icon size={80} color="#4e46dc" />
           </div>
         ))}
       </div>
