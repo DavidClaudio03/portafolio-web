@@ -36,7 +36,7 @@ const LogoSlider = () => {
       <div className="logos-slide">
         {icons.map(({ Icon, label }, index) => (
           <div key={index} className="icon-container" title={label}>
-            <Icon size={80} color="#4e46dc" />
+            <Icon size={60} color="#4e46dc" />
           </div>
         ))}
       </div>

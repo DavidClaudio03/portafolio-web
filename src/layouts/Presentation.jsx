@@ -1,11 +1,13 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import AnimationBody from "../Animation/Body/Ani_Body";
 import NavBar from "./Navbar";
-import AnimationBorder from "../Animation/Presentation/Ani_BorderPresentation"
+import AnimationBorder from "../Animation/Presentation/Ani_BorderPresentation";
 import ProfessionalVision from "../popup/ProfessionalVision";
-import LogoSlider from "../components/Slider"
+import LogoSlider from "../components/Slider";
 import foto from "../image/perfil.png";
-import cv from "../Document/ClaudioDavid_CV.pdf"
+import cv from "../Document/ClaudioDavid_CV.pdf";
+import "../Styles/PresentationCss/whatsApp.css";
+import { FaWhatsapp } from "react-icons/fa";
 
 function Presentation() {
   // Popup Professional Vision
@@ -20,15 +22,17 @@ function Presentation() {
         <NavBar />
         <div className="portfolio-experiment md:pt-14 w-full flex flex-col items-center justify-center ">
           <div className="animacionborde flex flex-col  md:flex-row flex-wrap w-full max-w-screen-lg min-h-[60vh] md:min-h-[50vh] items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 overflow-hidden">
-            <AnimationBorder/> 
+            <AnimationBorder />
             <div className="flex-1 text-center md:text-left">
               <h1 className="text-xl md:text-4xl font-bold text-customIndigo">
                 Desarrollador de Software
               </h1>
               <p className="mt-3 text-sm md:text-base text-white text-justify">
-                Estudiante de Ingeniería de Software con una pasión ardiente por el desarrollo de software, enfocado
-                en tecnologías web y móviles. Mi trayectoria se caracteriza por una combinación de creatividad,
-                adaptabilidad y un firme compromiso con el aprendizaje continuo.
+                Estudiante de Ingeniería de Software con una pasión ardiente por
+                el desarrollo de software, enfocado en tecnologías web y
+                móviles. Mi trayectoria se caracteriza por una combinación de
+                creatividad, adaptabilidad y un firme compromiso con el
+                aprendizaje continuo.
               </p>
               <div className="mt-4 flex flex-col md:flex-row md:space-x-3 space-y-3 md:space-y-0">
                 <a
@@ -68,11 +72,21 @@ function Presentation() {
               />
             </div>
           </div>
-        {/* Animacion LOGOS */}
-        <LogoSlider />
+          {/* Animacion LOGOS */}
+          <LogoSlider />
+        </div>
+        <div>
+          <a
+            className="btn-whats pulse"
+            href="https://wa.link/uo7roo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp size={30} color="white" />
+          </a>
         </div>
       </div>
-      <ProfessionalVision isPopupOpen={isPopupOpen} closePopup={closePopup}/>
+      <ProfessionalVision isPopupOpen={isPopupOpen} closePopup={closePopup} />
     </section>
   );
 }
