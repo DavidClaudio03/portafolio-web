@@ -3,6 +3,7 @@ import Modal from "../components/PopupBase"
 import "../Styles/Navbar/AnimationBorderNav.css"
 import { FaHome, FaFolderOpen, FaMailBulk, FaUserSecret } from "react-icons/fa"
 import { RiMenu5Fill } from "react-icons/ri";
+import "../Styles/Navbar/AnimationNombre.css"
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -11,12 +12,12 @@ function NavBar() {
   };
   return (
     <div>
-      <div className="animated-border-box fixed top-0 left-0 right-0 z-50 bg-opacity-10 max-w-screen-xl mx-auto rounded-md flex items-center justify-center py-4 px-4 shadow-md">
+      <div className="animated-border-box fixed top-0 left-0 right-0 z-50 bg-opacity-10 max-w-screen-2xl mx-auto rounded-md flex items-center justify-center py-4 px-4 shadow-md">
         {/* Sección izquierda: Nombre y descripción */}
         <div className="font-extrabold flex items-center space-x-8 lg:space-x-20 md:space-x-2 ml-auto mr-auto ">
           {/* Nombre */}
-          <div className="text-lg sm:text-2xl md:text-3xl lg:text-2xl xl:text-2xl text-customIndigo">
-            David Claudio <sup>™</sup>
+          <div className="shimmer text-lg sm:text-2xl md:text-3xl lg:text-2xl xl:text-2xl text-customIndigo">
+          <h1 className="shimmer font-medium ">David Claudio™</h1>
           </div>
 
           {/* Descripción (visible solo en pantallas grandes) */}
