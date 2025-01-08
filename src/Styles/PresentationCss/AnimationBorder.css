@@ -33,7 +33,7 @@
 /* Líneas animadas ocultas inicialmente */
 .portfolio-experiment .line {
   position: absolute;
-  background: #4f46e5;
+  background: #25D366;
   transform: scale(0); /* Ocultar por defecto */
   border-radius: 10px;
   transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
