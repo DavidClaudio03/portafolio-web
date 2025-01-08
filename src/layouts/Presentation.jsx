@@ -6,7 +6,7 @@ import ProfessionalVision from "../popup/ProfessionalVision";
 import LogoSlider from "../components/Slider";
 import foto from "../image/perfil.png";
 import cv from "../Document/ClaudioDavid_CV.pdf";
-import "../Styles/PresentationCss/WhatsApp.css";
+import "../Styles/PresentationCss/IconWhatsApp.css";
 import { FaWhatsapp, FaMailBulk, FaGithub } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 import { MdArrowUpward } from "react-icons/md";
