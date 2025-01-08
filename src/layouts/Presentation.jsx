@@ -7,9 +7,14 @@ import LogoSlider from "../components/Slider";
 import foto from "../image/perfil.png";
 import cv from "../Document/ClaudioDavid_CV.pdf";
 import "../Styles/PresentationCss/whatsApp.css";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaMailBulk, FaGithub } from "react-icons/fa";
+import { HiDownload } from "react-icons/hi";
+import { MdArrowUpward } from "react-icons/md";
+import "../Styles/PresentationCss/Booton/Contact.css";
+import "../Styles/PresentationCss/Booton/Download.css";
 
 function Presentation() {
+
   // Popup Professional Vision
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const openPantalla = () => setIsPopupOpen(true);
@@ -35,33 +40,42 @@ function Presentation() {
                 aprendizaje continuo.
               </p>
               <div className="mt-4 flex flex-col md:flex-row md:space-x-3 space-y-3 md:space-y-0">
-                <a
-                  href="https://wa.link/uo7roo"
-                  target="_blank"
-                  className="px-1 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm lg:px-4 lg:py-2 lg:text-base text-white bg-indigo-600 rounded-md hover:bg-indigo-700 text-center"
-                >
-                  Contáctame
-                </a>
-                <a
-                  href="https://github.com/DavidClaudio03"
-                  target="_blank"
-                  className="px-2 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm lg:px-4 lg:py-2 lg:text-base text-indigo-600 bg-white rounded-md hover:bg-gray-50 text-center"
-                >
-                  Ver Proyectos
-                </a>
+                <button className="btnP w-full md:w-auto px-2 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm lg:px-4 lg:py-2 lg:text-base flex items-center justify-center gap-2">
+                  <a
+                    href="mailto:davidclaudio5000@gmail.com"
+                    target="_blank"
+                    className="text-center w-full md:w-auto flex items-center justify-center gap-2"
+                  >
+                    <p>Contact</p> <FaMailBulk className="svg" size={30} />
+                  </a>
+                </button>
+
+                <button className="btnP w-full md:w-auto px-2 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm lg:px-4 lg:py-2 lg:text-base flex items-center justify-center gap-2">
+                  <a
+                    href="https://github.com/DavidClaudio03"
+                    target="_blank"
+                    className="text-center w-full md:w-auto flex items-center justify-center gap-2"
+                  >
+                    <p>Projects</p> <FaGithub className="svg" size={30} />
+                  </a>
+                </button>
+
                 <button
                   onClick={openPantalla}
-                  className="px-2 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm lg:px-4 lg:py-2 lg:text-base text-indigo-600 bg-white rounded-md hover:bg-gray-50 text-center"
+                  className="w-full md:w-auto flex font-medium font-bold justify-center gap-2 items-center mx-auto shadow-xl text-green-500 text-xs sm:text-sm lg:text-base bg-white backdrop-blur-md isolation-auto border-green-500 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-2 py-1 sm:px-3 sm:py-1 lg:px-4 lg:py-2 overflow-hidden border-2 rounded-md group"
                 >
-                  Visión Profesional
+                  Vision
+                  <MdArrowUpward className="w-6 h-6 sm:w-7 sm:h-7 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-green-500 ease-linear duration-300 rounded-full border border-green-500 group-hover:border-none p-1 rotate-45" />
                 </button>
                 <a
                   href={cv}
-                  download
-                  className="px-2 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm lg:px-4 lg:py-2 lg:text-base text-white bg-green-600 rounded-md hover:bg-green-700 text-center"
+                  target="_blank"
+                  class="w-full md:w-auto px-2 py-1 gap-2 bg-green-600 hover:bg-green-500 sm:px-3 sm:py-1 lg:px-4 lg:py-2 cursor-pointer flex items-center justify-center rounded-md text-gray-50 text-sm lg:text-base shadow-xl hover:scale-105 duration-500 hover:ring-1 font-medium font-bold"
                 >
-                  Descargar CV
+                  Download Cv
+                  <HiDownload className="w-5 h-5 animate-bounce" />
                 </a>
+
               </div>
             </div>
             <div className="flex-shrink-0">

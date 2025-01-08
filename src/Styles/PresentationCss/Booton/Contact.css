@@ -1,0 +1,68 @@
+/* Mantengo los estilos base */
+.btnP {
+  background-color: #fff;
+  border: 1px solid #25D366;
+  padding: 5px;
+  position: relative;
+  width: 8em;
+  height: 2.4em;
+  transition: 0.5s;
+  font-size: 17px;
+  border-radius: 0.4em;
+  display: flex; /* Usamos flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  overflow: hidden; /* Evita desbordamientos */
+}
+
+.btnP p {
+  margin: 0;
+  padding: 0;
+  color: #25D366;
+  font-weight: 600;
+  transition: 0.5s ease; /* Transición suave */
+  transform: translateX(1em); /* Comienza completamente centrado */
+  text-align: center; /* Asegura que el texto esté alineado */
+}
+
+.btnP svg {
+  margin: 0;
+  padding: 0;
+  opacity: 0; /* Inicialmente oculto */
+  transition: 0.5s ease; /* Transición suave */
+  height: 1em;
+  fill: #fff;
+  transform: translateX(0); /* Asegura que el ícono esté en su lugar */
+}
+
+/* Hover - Mueve el texto hacia la izquierda y muestra el ícono */
+.btnP:hover p {
+  transform: translateX(-.01em); /* Mueve el texto hacia la izquierda */
+  color: #fff;
+}
+
+.btnP:hover svg {
+  opacity: 1; /* Hace visible el ícono */
+  transform: translateX(0); /* Permanece en su lugar */
+}
+
+.btnP:hover {
+  background-color: #25D366;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .btnP {
+    width: 100%; /* Ocupa todo el ancho */
+    font-size: 14px; /* Reduce el tamaño del texto */
+    padding: 0.6em 1em; /* Espaciado ajustado */
+  }
+
+  .btnP p {
+    font-size: 14px; /* Ajusta el tamaño del texto */
+  }
+
+  .btnP svg {
+    height: 0.9em; /* Reduce el tamaño del ícono */
+  }
+}
