@@ -13,6 +13,8 @@ import { MdArrowUpward } from "react-icons/md";
 import "../Styles/PresentationCss/Booton/Contact.css";
 import "../Styles/PresentationCss/Booton/Download.css";
 
+
+
 function Presentation() {
 
   // Popup Professional Vision
@@ -46,7 +48,7 @@ function Presentation() {
                     target="_blank"
                     className="text-center w-full md:w-auto flex items-center justify-center gap-2"
                   >
-                    <p>Contact</p> <FaMailBulk className="svg" size={30} />
+                    <p>Email</p> <FaMailBulk className="svg" size={30} />
                   </a>
                 </button>
 
@@ -62,15 +64,15 @@ function Presentation() {
 
                 <button
                   onClick={openPantalla}
-                  className="w-full md:w-auto flex font-medium font-bold justify-center gap-2 items-center mx-auto shadow-xl text-green-500 text-xs sm:text-sm lg:text-base bg-white backdrop-blur-md isolation-auto border-green-500 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-2 py-1 sm:px-3 sm:py-1 lg:px-4 lg:py-2 overflow-hidden border-2 rounded-md group"
+                  className="w-full md:w-auto flex font-medium font-bold justify-center gap-2 items-center mx-auto shadow-xl text-gay-50 text-xs sm:text-sm lg:text-base bg-green-500 backdrop-blur-md isolation-auto border-green-500 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-2 py-1 sm:px-3 sm:py-1 lg:px-4 lg:py-2 overflow-hidden border-2 rounded-md group"
                 >
                   Vision
-                  <MdArrowUpward className="w-6 h-6 sm:w-7 sm:h-7 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-green-500 ease-linear duration-300 rounded-full border border-green-500 group-hover:border-none p-1 rotate-45" />
+                  <MdArrowUpward className="w-6 h-6 sm:w-7 sm:h-7 justify-end group-hover:rotate-90 group-hover:bg-green-500 text-gray-50 ease-linear duration-300 rounded-full border border-gray-50 group-hover:border-none p-1 rotate-45" />
                 </button>
                 <a
                   href={cv}
                   target="_blank"
-                  class="w-full md:w-auto px-2 py-1 gap-2 bg-green-600 hover:bg-green-500 sm:px-3 sm:py-1 lg:px-4 lg:py-2 cursor-pointer flex items-center justify-center rounded-md text-gray-50 text-sm lg:text-base shadow-xl hover:scale-105 duration-500 hover:ring-1 font-medium font-bold"
+                  class="w-full md:w-auto px-2 py-2 gap-2 bg-green-500 hover:bg-green-500 sm:px-3 sm:py-1 lg:px-4 lg:py-2 cursor-pointer flex items-center justify-center rounded-md text-gray-50 text-sm lg:text-base shadow-xl hover:scale-105 duration-500 hover:ring-1 font-medium font-bold"
                 >
                   Download Cv
                   <HiDownload className="w-5 h-5 animate-bounce" />

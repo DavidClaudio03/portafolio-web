@@ -1,11 +1,11 @@
 /* Mantengo los estilos base */
 .btnP {
-  background-color: #fff;
-  border: 1px solid #25D366;
+  background-color: #25D366;
+  border: 2px solid #515050;
   padding: 5px;
   position: relative;
   width: 8em;
-  height: 2.4em;
+  height: 2.7em;
   transition: 0.5s;
   font-size: 17px;
   border-radius: 0.4em;
@@ -18,7 +18,7 @@
 .btnP p {
   margin: 0;
   padding: 0;
-  color: #25D366;
+  color: #ffffff;
   font-weight: 600;
   transition: 0.5s ease; /* Transición suave */
   transform: translateX(1em); /* Comienza completamente centrado */
