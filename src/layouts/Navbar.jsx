@@ -37,7 +37,24 @@ function NavBar() {
       <div className="fixed top-0 left-0 right-0 max-w-screen-2xl flex items-center justify-between px-16 py-4">
         {/* Nombre */}
         <div className="font-extrabold flex items-center space-x-8">
-          <h1 className="shimmer font-medium">David Claudio™</h1>
+          {/* <h1 className="shimmer font-medium">David Claudio™</h1> */}
+          <div className="NameEfection ">
+            <svg id="svg" >
+              <symbol id="unique-s-text">
+                <text textAnchor="middle" x="15%" y="50%" dominantBaseline="middle">
+                  David Claudio ™
+                </text>
+              </symbol>
+              <g className="g-ants">
+                <use xlinkHref="#unique-s-text" className="text-copy"></use>
+                <use xlinkHref="#unique-s-text" className="text-copy"></use>
+                <use xlinkHref="#unique-s-text" className="text-copy"></use>
+                <use xlinkHref="#unique-s-text" className="text-copy"></use>
+                <use xlinkHref="#unique-s-text" className="text-copy"></use>
+              </g>
+            </svg>
+          </div>
+
         </div>
         {/* Botón de Menú (para móviles) */}
         <button
@@ -102,22 +119,22 @@ function NavBar() {
             }}
           ></div>
         </ul>
-         {/* Modal del Menú (pantallas pequeñas) */}
-         <Modal isOpen={isMenuOpen} onClose={handleCloseMenu}>
+        {/* Modal del Menú (pantallas pequeñas) */}
+        <Modal isOpen={isMenuOpen} onClose={handleCloseMenu}>
           <div className="flex flex-col text-center justify-center items-center space-y-4 text-lg font-bold">
             <li id="item" className="item_1">
               <div className="inner_item inner_item_1 flex items-center space-x-2">
-                <IoHomeOutline  />
+                <IoHomeOutline />
               </div>
             </li>
             <li id="item" className="item_1">
               <div className="inner_item inner_item_2 flex items-center space-x-2">
-                <IoPersonOutline  />
+                <IoPersonOutline />
               </div>
             </li>
             <li id="item" className="item_1">
               <div className="inner_item inner_item_3 flex items-center space-x-2">
-                <AiOutlineFundProjectionScreen/>
+                <AiOutlineFundProjectionScreen />
               </div>
             </li>
             <li id="item" className="item_1">
