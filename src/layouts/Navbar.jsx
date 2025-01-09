@@ -8,10 +8,7 @@ import "../Styles/Navbar/AnimationNombre.css";
 import "../Styles/Navbar/AnimationMenu2.css";
 
 function NavBar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const handleCloseMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [markerStyle, setMarkerStyle] = useState({});
   const menuRef = useRef(null);
@@ -28,18 +25,56 @@ function NavBar() {
     }
   }, [activeIndex]);
 
-  const handleMouseOver = (index) => {
-    setActiveIndex(index);
-  };
+  const sections = [
+    { id: "home", index: 0 },
+    { id: "about", index: 1 },
+    { id: "projects", index: 2 },
+    { id: "contact", index: 3 },
+  ];
+  useEffect(() => {
+    const handleScroll = () => {
+      let newActiveIndex = activeIndex;
+
+      // Caso especial: Si el scroll está al inicio, activa "Home"
+      if (window.scrollY === 0) {
+        newActiveIndex = 0;
+      } else {
+        // Detectar otras secciones según su posición
+        sections.forEach((section) => {
+          const element = document.getElementById(section.id);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            if (
+              rect.top <= window.innerHeight / 2 &&
+              rect.bottom >= window.innerHeight / 2
+            ) {
+              newActiveIndex = section.index;
+            }
+          }
+        });
+      }
+
+      // Solo actualiza si el índice cambia
+      if (newActiveIndex !== activeIndex) {
+        console.log("Active index updated:", newActiveIndex); // Depuración
+        setActiveIndex(newActiveIndex);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [activeIndex, sections]);
 
   return (
     <div>
-      <div className="fixed top-0 left-0 right-0 max-w-screen-2xl flex items-center justify-between px-16 py-4">
+      <div className="fixed top-0 left-0 z-50 right-0 max-w-screen-3xl flex items-center justify-between px-16 py-4">
         {/* Nombre */}
         <div className="font-extrabold flex items-center space-x-8">
-          {/* <h1 className="shimmer font-medium">David Claudio™</h1> */}
-          <div className="NameEfection ">
-            <svg id="svg" >
+          <div className="NameEfection">
+            <svg id="svg">
               <symbol id="unique-s-text">
                 <text textAnchor="middle" x="15%" y="50%" dominantBaseline="middle">
                   David Claudio ™
@@ -54,58 +89,39 @@ function NavBar() {
               </g>
             </svg>
           </div>
-
         </div>
-        {/* Botón de Menú (para móviles) */}
         <button
-          data-toggle="modal"
-          data-target="#myModal"
           className="btn btn-primary btn-lg lg:hidden text-xl sm:text-2xl md:text-3xl focus:outline-none"
           onClick={() => setIsMenuOpen(false)}
         >
           <RiMenu5Fill color="white" />
         </button>
-        {/* Menú */}
-        <ul
-          ref={menuRef}
-          className="hidden lg:flex lg:items-center text-xl lg:space-x-2 ml-auto"
-        >
-          <li
-            className={`menu-item ${activeIndex === 0 ? "active" : ""}`}
-            onMouseOver={() => handleMouseOver(0)}
-          >
-            <a href="#home">
-              <IoHomeOutline size={20} />
-            </a>
-          </li>
-          <li
-            className={`menu-item ${activeIndex === 1 ? "active" : ""}`}
-            onMouseOver={() => handleMouseOver(1)}
-          >
-            <a href="#about">
-              <IoPersonOutline size={20} />
-            </a>
-          </li>
-          <li
-            className={`menu-item ${activeIndex === 2 ? "active" : ""}`}
-            onMouseOver={() => handleMouseOver(2)}
-          >
-            <a href="#projects">
-              <AiOutlineFundProjectionScreen size={20} />
-            </a>
-          </li>
-          <li
-            className={`menu-item ${activeIndex === 3 ? "active" : ""}`}
-            onMouseOver={() => handleMouseOver(3)}
-          >
-            <a
-              href="https://wa.link/uo7roo"
-              target="_blank"
-              rel="noopener noreferrer"
+        <ul ref={menuRef} className="hidden lg:flex lg:items-center text-xl lg:space-x-2 ml-auto">
+          {sections.map((section, index) => (
+            <li
+              key={section.id}
+              className={`menu-item ${activeIndex === index ? "active" : ""}`}
+              onMouseEnter={() => setActiveIndex(index)}
+              onClick={() => {
+                if (section.id === "contact") {
+                  window.open("https://wa.link/uo7roo", "_blank");
+                } else {
+                  const element = document.getElementById(section.id);
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth", block: "start" });
+                    setActiveIndex(index);
+                  }
+                }
+              }}
             >
-              <FiPhone size={20} />
-            </a>
-          </li>
+              <a href={section.id === "contact" ? "#" : `#${section.id}`}>
+                {index === 0 && <IoHomeOutline size={20} />}
+                {index === 1 && <IoPersonOutline size={20} />}
+                {index === 2 && <AiOutlineFundProjectionScreen size={20} />}
+                {index === 3 && <FiPhone size={20} />}
+              </a>
+            </li>
+          ))}
           <div
             id="marker"
             style={{
@@ -119,37 +135,7 @@ function NavBar() {
             }}
           ></div>
         </ul>
-        {/* Modal del Menú (pantallas pequeñas) */}
-        <Modal isOpen={isMenuOpen} onClose={handleCloseMenu}>
-          <div className="flex flex-col text-center justify-center items-center space-y-4 text-lg font-bold">
-            <li id="item" className="item_1">
-              <div className="inner_item inner_item_1 flex items-center space-x-2">
-                <IoHomeOutline />
-              </div>
-            </li>
-            <li id="item" className="item_1">
-              <div className="inner_item inner_item_2 flex items-center space-x-2">
-                <IoPersonOutline />
-              </div>
-            </li>
-            <li id="item" className="item_1">
-              <div className="inner_item inner_item_3 flex items-center space-x-2">
-                <AiOutlineFundProjectionScreen />
-              </div>
-            </li>
-            <li id="item" className="item_1">
-              <div className="inner_item inner_item_4 flex items-center space-x-2">
-                <FiPhone />
-                <a
-                  href="https://wa.link/uo7roo"
-                  className="hover:text-indigo-400"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </div>
-            </li>
-          </div>
-        </Modal>
+
       </div>
     </div>
   );
