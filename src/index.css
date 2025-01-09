@@ -16,3 +16,9 @@ canvas {
   pointer-events: none;
   filter: brightness(1); /* Cambia el color de las partículas a negro */
 }
+#main-content {
+  margin-top: 64px; /* Ajusta a la altura real de tu navbar */
+}
+
+
+
