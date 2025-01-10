@@ -13,15 +13,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;
 }
 
 
 .text-copy {
   fill: none;
-  stroke: rgb(27, 207, 150);
+  stroke: rgb(85, 244, 194);
   stroke-dasharray: 6% 29%;
-  stroke-width: .5px;
+  stroke-width: 1px;
   stroke-dashoffset: 0%;
   animation: stroke-offset 5.5s infinite linear;
 }
@@ -32,22 +31,22 @@
 }
 
 .text-copy:nth-child(2) {
-  stroke:  #69bffc;/* Mantis (verde suave) */
+  stroke:  #89c9f7;/* Mantis (verde suave) */
   animation-delay: -2s;
 }
 
 .text-copy:nth-child(3) {
-  stroke: #f3e035; /* Amethyst (púrpura intenso) */
+  stroke: #f9e428; /* Amethyst (púrpura intenso) */
   animation-delay: -3s;
 }
 
 .text-copy:nth-child(4) {
-  stroke: #FFFFFF; /* Wattle (amarillo cálido) */
+  stroke: #ffffff; /* Wattle (amarillo cálido) */
   animation-delay: -4s;
 }
 
 .text-copy:nth-child(5) {
-  stroke: #7cef65; /* Purple Heart (morado vibrante) */
+  stroke: #74f85a; /* Purple Heart (morado vibrante) */
   animation-delay: -5s;
 }
 
