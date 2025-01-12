@@ -74,9 +74,22 @@ function NavBar() {
         {/* Nombre */}
         <div className="font-extrabold flex items-center space-x-8">
           <div className="NameEfection">
-            <svg id="svg">
+            <svg id="svg" className="relative">
               <symbol id="unique-s-text">
-                <text textAnchor="middle" x="15%" y="50%" dominantBaseline="middle">
+
+                <rect
+                  x="1%" y="10%"
+                  width="28%" height="60%"
+                  opacity="0"
+                />
+
+                <text
+                  textAnchor="middle"
+                  x="15%"
+                  y="50%"
+                  dominantBaseline="middle"
+                  // className="fill-gray-700"
+                >
                   David Claudio ™
                 </text>
               </symbol>
@@ -90,6 +103,7 @@ function NavBar() {
             </svg>
           </div>
         </div>
+
         <button
           className="btn btn-primary btn-lg lg:hidden text-xl sm:text-2xl md:text-3xl focus:outline-none"
           onClick={() => setIsMenuOpen(false)}

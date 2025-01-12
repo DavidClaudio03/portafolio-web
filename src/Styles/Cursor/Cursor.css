@@ -1,0 +1,99 @@
+:root {
+    --background: #0e1116;
+    --white: #ffffff;
+    --accent: #1bf8c7;
+    --gray: #818a91;
+    --green: #1bf8c7;
+    --font-primary: "Helvetica Neue", sans-serif;
+  }
+  
+  #root {
+    cursor: none;
+  }
+  
+  h1,
+  p {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+  }
+  
+  .custom-cursor {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: 1.5px solid var(--white);
+    border-radius: 50%;
+    pointer-events: none; /* Esto evita que el cursor afecte los eventos */
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  }
+  
+  
+  .cursor-dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--white);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .trail-segment {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 80%
+    );
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
+  }
+  
+  /* Display Section Styling */
+  .display {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9997;
+  }
+  
+  .display h1 {
+    font-size: 2rem;
+    color: var(--accent);
+    letter-spacing: 0.15rem;
+    line-height: 1.2;
+  }
+  
+  .display p {
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-top: 15px;
+  }
+  
+  h1,
+  p {
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .display h1:hover {
+    color: var(--white);
+  }
+  
+  .display p:hover {
+    color: var(--accent);
+  }
+  
