@@ -11,6 +11,7 @@ import { HiDownload } from "react-icons/hi";
 import { MdArrowUpward } from "react-icons/md";
 import "../Styles/PresentationCss/Booton/Contact.css";
 import "../Styles/PresentationCss/Booton/Download.css";
+// import LogoPresentation from "../Animation/Presentation/LogoPresentation";
 
 function Presentation() {
 
@@ -85,11 +86,12 @@ function Presentation() {
               </div>
             </div>
             <div className="flex-shrink-0">
-              <img
+            {/*    */}
+               <img
                 src={foto}
                 alt="Foto de perfil"
                 className="w-24 h-24 md:w-48 md:h-48 object-cover rounded-full border-2 border-green-500"
-              />
+              /> 
             </div>
           </div>
           {/* Animacion LOGOS */}
