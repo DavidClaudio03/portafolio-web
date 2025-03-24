@@ -7,14 +7,13 @@
 #svg {
   position: relative;
   font: 2.1em 'Montserrat', sans-serif;
-  width: 960px;
+  width: 100%;
+  max-width: 600px;
   height: 50px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .text-copy {
   fill: none;

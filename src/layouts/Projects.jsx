@@ -1,42 +1,44 @@
 import geoportal from '../image/geoportal.png';
 import gamerfest from '../image/gamerfest.png';
 import PantallaFlotante from "../components/PopupBase";
-import React, { useState } from "react";
+import useScrollReveal from "../hooks/useScrollReveal";
+import { useState } from "react";
 
 export default function Projects() {
+  useScrollReveal();
   const [isPantallaFlotanteOpen, setIsPantallaFlotanteOpen] = useState(false);
   const openPantalla = () => setIsPantallaFlotanteOpen(true);
   const closePantalla = () => setIsPantallaFlotanteOpen(false);
   const projects = [
     {
       title: "GeoPortal Municipal",
-      description: "Desarrollo de una solución geoespacial para un Gobierno Autónomo Descentralizado, demostrando habilidades en desarrollo web y manejo de bases de datos.",
+      description: "Development of a geospatial solution for a Decentralized Autonomous Government, demonstrating skills in web development and database management.",
       image: geoportal,
       link: "https://www.salcedo.gob.ec/portalciudad/geo",
     },
     {
-      title: "GamerFest Web",
-      description: "Gestión del sitio web para un evento de videojuegos, evidenciando capacidad para entregar soluciones funcionales y atractivas.",
+      title: "Web GamerFest ",
+      description: "Website management for a video game event, demonstrating the ability to deliver functional and attractive solutions.",
       image: gamerfest ,
       link: "https://www.youtube.com/watch?v=U3shhh922Oo"
     },
   ];
 
   return (
-    <section id="projects" className="py-10">
-      <div className="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-2 border-gray-200 rounded-lg">
+    <section id="projects" className="py-2">
+      <div className="py-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="">
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Proyectos</h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-indigo-600 sm:text-4xl">
-            Proyectos Destacados
+          <h2 className="reveal-rotate text-base text-purple-500 font-semibold tracking-wide">Projetcs</h2>
+          <p className="reveal-right mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-100 sm:text-3xl">
+          Featured Projects
           </p>
-          <p className="mt-4 text-xl text-white">
-            Estos proyectos demuestran mi capacidad para desarrollar soluciones innovadoras y funcionales.
+          <p className="reveal-right mt-4 text-base text-white">
+            These projects demonstrate my ability to develop innovative and functional solutions. 
           </p>
         </div>
 
         <div className="mt-10">
-          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 ">
+          <dl className="space-y-2 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-2">
             {projects.map((project, index) => (
               <div key={index} className="relative">
                 <dt>
@@ -46,7 +48,7 @@ export default function Projects() {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="rounded-lg shadow-lg object-cover w-full h-full"
+                        className="reveal-zoom rounded-lg shadow-lg object-cover w-full h-full"
                         />
                     </a>
                     </div>
@@ -57,14 +59,14 @@ export default function Projects() {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="rounded-lg shadow-lg object-cover w-full h-full"
+                        className="reveal-zoom rounded-lg shadow-lg object-cover w-full h-full"
                         />
                     </a>
                     </div>
                   )}
-                  <p className="text-lg leading-6 font-medium text-gray-900">{project.title}</p>
+                  <p className="reveal-fade text-lg leading-6 font-medium text-purple-500">{project.title}</p>
                 </dt>
-                <dd className="mt-2 text-base text-white">{project.description}</dd>
+                <dd className="reveal-fade mt-2 text-sm text-gray-50">{project.description}</dd>
               </div>
             ))}
           </dl>
@@ -72,9 +74,9 @@ export default function Projects() {
         <div className="relative h-20">
           <button
             onClick={openPantalla}
-            className="absolute bottom-2 right-2 flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-3 md:text-sm md:px-6"
+            className="skill absolute bottom-2 right-2 flex items-center justify-center px-4 py-2 text-sm text-white md:py-2 md:text-sm md:px-4"
           >
-            Más Proyectos
+            More Projects
           </button>
         </div>
       </div>

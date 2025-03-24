@@ -1,10 +1,9 @@
-import React from 'react'
-import { FaGithub, FaLinkedin, FaMailBulk, FaMailchimp, FaTwitter, FaWhatsapp } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaMailBulk, FaWhatsapp } from 'react-icons/fa'
 
 
 function Footer() {
   return (
-    <footer className="text-white py-4">
+    <footer className="text-white py-1">
       <div className="container mx-auto text-center">
         <div className="flex justify-center space-x-4 mb-4">
           <a href="https://github.com/DavidClaudio03" target='_blank' className="text-2xl hover:text-blue-400">
@@ -20,10 +19,10 @@ function Footer() {
             <FaMailBulk />
           </a>
         </div>
-        <p>&copy; {new Date().getFullYear()} David Claudio. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} David Claudio. All rights reserved.</p>
       </div>
     </footer>
   )
 }
 
-export default Footer
+export default Footer;

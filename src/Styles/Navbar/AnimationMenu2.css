@@ -8,7 +8,7 @@ ul {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 .menu-item.active a {
-    color: #00f; /* Cambia al color que desees */
+    color: rgb(0, 0, 0); /* Cambia al color que desees */
     font-weight: bold;
   }
   
@@ -62,11 +62,11 @@ ul li.active a .ion-icon {
 }
 
 ul li:nth-child(1).active~#marker::before {
-    background: #5da6ff;
-    box-shadow: 0 0 15px #5da6ff,
-        0 0 30px #5da6ff,
-        0 0 40px #5da6ff,
-        0 0 60px #5da6ff
+    background: #5dff80;
+    box-shadow: 0 0 15px #5dff80,
+        0 0 30px #5dff80,
+        0 0 40px #5dff80,
+        0 0 60px #5dff80
 }
 
 ul li:nth-child(2).active~#marker::before {
@@ -86,11 +86,11 @@ ul li:nth-child(3).active~#marker::before {
 }
 
 ul li:nth-child(4).active~#marker::before {
-    background: #0f0;
-    box-shadow: 0 0 15px #0f0,
-        0 0 30px #0f0,
-        0 0 40px #0f0,
-        0 0 60px #0f0
+    background: #3086ff;
+    box-shadow: 0 0 15px #3086ff,
+        0 0 30px #3086ff,
+        0 0 40px #3086ff,
+        0 0 60px #3086ff
 }
 
 ul li:nth-child(5).active~#marker::before {

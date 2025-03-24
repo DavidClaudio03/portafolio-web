@@ -1,13 +1,14 @@
 /* Mantengo los estilos base */
 .btnP {
   background-color: #25D366;
-  border: 2px solid #515050;
+  border: 1px solid #ffffff;
   padding: 5px;
   position: relative;
-  width: 8em;
-  height: 2.7em;
+  width: 7em;
+  height: 2.2em;
   transition: 0.5s;
-  font-size: 17px;
+  font-size: 14px;
+  font-weight: bold;
   border-radius: 0.4em;
   display: flex; /* Usamos flexbox */
   align-items: center; /* Centra verticalmente */
@@ -19,7 +20,7 @@
   margin: 0;
   padding: 0;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 400;
   transition: 0.5s ease; /* Transición suave */
   transform: translateX(1em); /* Comienza completamente centrado */
   text-align: center; /* Asegura que el texto esté alineado */

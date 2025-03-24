@@ -1,6 +1,5 @@
-import React from 'react';
 import "../../Styles/PresentationCss/AnimationBorder.css"
-export default () => (
+const AniBorderPresentation = () => (
     <div>
         <span className="line -right"></span>
         <span className="line -top"></span>
@@ -8,3 +7,7 @@ export default () => (
         <span className="line -bottom"></span>
     </div>
 );
+
+AniBorderPresentation.displayName = "AniBorderPresentation";
+
+export default AniBorderPresentation;
