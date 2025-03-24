@@ -1,4 +1,3 @@
-import React from 'react'
 import MainLayout from '../layouts/MainLayout'
 import Presentation from '../layouts/Presentation'
 import AboutMe from '../layouts/AboutMe'

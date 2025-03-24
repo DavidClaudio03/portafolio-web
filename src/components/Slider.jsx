@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { SiSpringboot, SiAngular, SiFlutter, SiFirebase,SiMysql} from "react-icons/si";
 import {DiMsqlServer } from "react-icons/di";
 import {FaDocker, FaNodeJs, FaUnity } from "react-icons/fa";
@@ -30,9 +30,10 @@ const LogoSlider = () => {
       document.querySelector(".logo-slider").appendChild(copy);
     }
   }, []);
+  
 
   return (
-    <div className="logo-slider">
+    <div className="reveal-title logo-slider">
       <div className="logos-slide">
         {icons.map(({ Icon, label }, index) => (
           <div key={index} className="icon-container" title={label}>

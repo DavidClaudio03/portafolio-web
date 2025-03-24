@@ -1,0 +1,15 @@
+.status-ring {
+    position: absolute;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border: 2px solid #5ce791;
+    border-radius: 50%;
+    top: -5px;
+    left: -5px;
+    border-top-color: white;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,69 @@
+/* From Uiverse.io by KhaledMatalkah */ 
+@keyframes floating {
+    0%, 100% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  @keyframes particles {
+    0% {
+      transform: translateZ(0, 0);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: translate(190px, 50px);
+      opacity: 0;
+    }
+  }
+  
+  .skill {
+    background: rgba(57, 57, 57, 0.7);
+    display: inline-block;
+    background-size: 200% auto;
+    border: 1px solid;
+    border-radius: 12px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    animation: floating 3s ease-in-out infinite;
+    transition: color 0.1s ease, box-shadow 0.1s ease, transform 0.1s ease;
+  }
+  
+  .skill::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px #ffe330;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    width: 5px;
+    height: 5px;
+    background: #ffe330;
+    animation: particles 2s infinite;
+  }
+  
+  .skill::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } 
+  
+  .skill:hover {
+    color: #ffe330;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+    background-position: right center;
+    background: linear-gradient(to right, #FFB900, #ffe330);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

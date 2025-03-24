@@ -1,13 +1,11 @@
-import React from 'react'
 import Footer from './Footer'
 import "../index.css";
-import NavBar from "./Navbar";
+import PropTypes from 'prop-types';
 
 
 function MainLayout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen">
-       <NavBar /> 
+    <div className="flex flex-col m-2 overflow-x-hidden"> 
       <main className="flex-grow">
         {children}
       </main>
@@ -15,5 +13,8 @@ function MainLayout({ children }) {
     </div>
   )
 }
+MainLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
-export default MainLayout
+export default MainLayout;

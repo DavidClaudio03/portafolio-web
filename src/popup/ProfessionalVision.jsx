@@ -1,15 +1,15 @@
-import React from "react";
 import Popup from "../components/PopupBase";
+import PropTypes from "prop-types";
 
 function ProfessionalVision({ isPopupOpen, closePopup }) {
   return (
     <Popup isOpen={isPopupOpen} onClose={closePopup}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-base text-indigo-500 font-semibold tracking-wide uppercase">
+          <h2 className="text-base text-green-400 font-semibold tracking-wide uppercase">
             Visión
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+          <p className="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-white sm:text-3xl">
             Visión Profesional
           </p>
           <p className="mt-4 max-w-2xl text-xl text-white lg:mx-auto">
@@ -22,7 +22,7 @@ function ProfessionalVision({ isPopupOpen, closePopup }) {
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
             <div className="relative">
               <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                <div className="absolute flex items-center justify-center h-8 w-10 rounded-md bg-green-500 text-white">
                   <svg
                     className="h-6 w-6"
                     xmlns="http://www.w3.org/2000/svg"
@@ -39,16 +39,15 @@ function ProfessionalVision({ isPopupOpen, closePopup }) {
                     />
                   </svg>
                 </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-indigo-500">
+                <p className="ml-16 text-lg leading-6 font-medium text-green-400">
                   Aspiraciones
                 </p>
               </dt>
-              <dd className="mt-2 ml-16 text-base text-white">
-                <ul className="list-disc pl-5 space-y-2">
+              <dd className="mt-2 ml-14 text-sm text-white">
+                <ul className="list-disc pl-5 space-y-2 flex flex-col p-2">
                   <li>Dominar múltiples tecnologías de desarrollo</li>
                   <li>
-                    Desarrollar software innovador con integración de
-                    Inteligencia Artificial
+                    Desarrollar software innovador con integración de Inteligencia Artificial
                   </li>
                   <li>Contribuir a soluciones de seguridad informática</li>
                 </ul>
@@ -57,7 +56,7 @@ function ProfessionalVision({ isPopupOpen, closePopup }) {
 
             <div className="relative">
               <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                <div className="absolute flex items-center justify-center h-8 w-10 rounded-md bg-green-500 text-white">
                   <svg
                     className="h-6 w-6"
                     xmlns="http://www.w3.org/2000/svg"
@@ -74,12 +73,12 @@ function ProfessionalVision({ isPopupOpen, closePopup }) {
                     />
                   </svg>
                 </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-indigo-500">
+                <p className="ml-16 text-lg leading-6 font-medium text-green-400">
                   Retos Profesionales
                 </p>
               </dt>
-              <dd className="mt-2 ml-16 text-base text-white">
-                <ul className="list-disc pl-5 space-y-2">
+              <dd className="mt-2 ml-14 text-sm text-white">
+                <ul className="list-disc pl-5 space-y-2 flex flex-col p-2">
                   <li>Desarrollo de software con Inteligencia Artificial</li>
                   <li>
                     Implementación de soluciones de seguridad informática
@@ -94,5 +93,10 @@ function ProfessionalVision({ isPopupOpen, closePopup }) {
     </Popup>
   );
 }
+ProfessionalVision.propTypes = {
+  isPopupOpen: PropTypes.bool.isRequired,
+  closePopup: PropTypes.func.isRequired,
+};
 
 export default ProfessionalVision;
+
