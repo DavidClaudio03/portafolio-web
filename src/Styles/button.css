@@ -64,6 +64,6 @@
     transform: scale(1.05);
     background-position: right center;
     background-image: linear-gradient(to right, #FFB900, #ffe330);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
