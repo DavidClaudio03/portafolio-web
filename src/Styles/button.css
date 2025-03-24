@@ -63,7 +63,7 @@
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
     transform: scale(1.05);
     background-position: right center;
-    background: linear-gradient(to right, #FFB900, #ffe330);
+    background-image: linear-gradient(to right, #FFB900, #ffe330);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
