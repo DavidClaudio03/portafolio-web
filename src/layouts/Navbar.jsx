@@ -78,7 +78,7 @@ function NavBar() {
                     y="50%"
                     dominantBaseline="middle"
                   >
-                    David Claudio ™
+                    David Claudio <tspan style={{ fontSize: "18px" }}>™</tspan>
                   </text>
                 </symbol>
                 <g className="g-ants">

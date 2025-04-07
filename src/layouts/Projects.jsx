@@ -20,7 +20,7 @@ export default function Projects() {
       title: "Web GamerFest ",
       description: "Website management for a video game event, demonstrating the ability to deliver functional and attractive solutions.",
       image: gamerfest ,
-      link: "https://www.youtube.com/watch?v=U3shhh922Oo"
+      link: "#"
     },
   ];
 
