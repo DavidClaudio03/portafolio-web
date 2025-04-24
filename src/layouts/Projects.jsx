@@ -1,5 +1,6 @@
 import geoportal from '../image/geoportal.png';
 import gamerfest from '../image/gamerfest.png';
+import education from '../image/education.png';
 import PantallaFlotante from "../components/PopupBase";
 import useScrollReveal from "../hooks/useScrollReveal";
 import { useState } from "react";
@@ -20,7 +21,13 @@ export default function Projects() {
       title: "Web GamerFest ",
       description: "Website management for a video game event, demonstrating the ability to deliver functional and attractive solutions.",
       image: gamerfest ,
-      link: "#"
+      link: "https://github.com/DavidClaudio03/gamerfest_project"
+    },
+    {
+      title: "School Platform",
+      description: "Development of a school management platform using Odoo, focused on academic and administrative management.",
+      image: education,
+      link: "https://github.com/Vandal593/Education"
     },
   ];
 
@@ -40,7 +47,7 @@ export default function Projects() {
         <div className="mt-10">
           <dl className="space-y-2 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-2">
             {projects.map((project, index) => (
-              <div key={index} className="relative">
+              <div key={index} className="relative py-4">
                 <dt>
                   {project.image ? (
                     <div className="aspect-w-16 aspect-h-9 mb-4">

@@ -7,15 +7,13 @@ function ProfessionalVision({ isPopupOpen, closePopup }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-base text-green-400 font-semibold tracking-wide uppercase">
-            Visión
+            Vision
           </h2>
           <p className="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-white sm:text-3xl">
-            Visión Profesional
+            Professinal Vision
           </p>
           <p className="mt-4 max-w-2xl text-xl text-white lg:mx-auto">
-            Mi objetivo es convertirme en un desarrollador Full Stack Senior,
-            con una especialización emergente en ciberseguridad y hacking
-            ético.
+          My goal is to become a Senior Full Stack Developer, with an emerging specialization in cybersecurity and ethical hacking.
           </p>
         </div>
         <div className="mt-10">
@@ -40,16 +38,14 @@ function ProfessionalVision({ isPopupOpen, closePopup }) {
                   </svg>
                 </div>
                 <p className="ml-16 text-lg leading-6 font-medium text-green-400">
-                  Aspiraciones
+                  Aspirations
                 </p>
               </dt>
               <dd className="mt-2 ml-14 text-sm text-white">
                 <ul className="list-disc pl-5 space-y-2 flex flex-col p-2">
-                  <li>Dominar múltiples tecnologías de desarrollo</li>
-                  <li>
-                    Desarrollar software innovador con integración de Inteligencia Artificial
-                  </li>
-                  <li>Contribuir a soluciones de seguridad informática</li>
+                  <li>Master multiple development technologies</li>
+                  <li>Develop innovative software with Artificial Intelligence integration</li>
+                  <li>Contribute to computer security solutions</li>
                 </ul>
               </dd>
             </div>
@@ -74,16 +70,14 @@ function ProfessionalVision({ isPopupOpen, closePopup }) {
                   </svg>
                 </div>
                 <p className="ml-16 text-lg leading-6 font-medium text-green-400">
-                  Retos Profesionales
+                Professional Challenges
                 </p>
               </dt>
               <dd className="mt-2 ml-14 text-sm text-white">
                 <ul className="list-disc pl-5 space-y-2 flex flex-col p-2">
-                  <li>Desarrollo de software con Inteligencia Artificial</li>
-                  <li>
-                    Implementación de soluciones de seguridad informática
-                  </li>
-                  <li>Proyectos que desafíen mis límites tecnológicos</li>
+                  <li>Software development with Artificial Intelligence</li>
+                  <li>Implementation of computer security solutions</li>
+                  <li>Projects that challenge my technological limits</li>
                 </ul>
               </dd>
             </div>
